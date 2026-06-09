@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info & Datos - UI/UX Mega Collection</title>
+    <link rel="stylesheet" href="../../assets/css/global.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="component-container">
+        <header class="category-header">
+            <a href="../../index.html" class="back-btn">← Volver al Índice</a>
+            <h1>📊 Información y Datos</h1>
+            <p>Componentes para presentar contenido al usuario de manera clara y organizada</p>
+        </header>
+
+        <!-- SECCIÓN 1: CARDS -->
+        <section class="component-section">
+            <h2>📦 Tarjetas (Cards)</h2>
+            
+            <div class="component-grid">
+                <!-- Card Producto Básica -->
+                <div class="component-item">
+                    <div class="preview-area">
+                        <div class="card-product-basic">
+                            <div class="card-image">
+                                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400" alt="Producto">
+                                <span class="badge-new">Nuevo</span>
+                            </div>
+                            <div class="card-content">
+                                <h3>Reloj Minimalista</h3>
+                                <p class="price">$129.99</p>
+                                <p class="description">Diseño elegante para uso diario</p>
+                                <button class="btn-primary">Añadir al Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="prompt-box" onclick="copyPrompt(this)">
+                        <code>Modern minimalist product card design with clean white background, product image on top, title, price in bold, short description, and primary CTA button. Soft shadows, rounded corners 12px, subtle hover lift effect. E-commerce style, professional UI.</code>
+                        <span class="copy-hint">Click para copiar prompt</span>
+                    </div>
+                </div>
+
+                <!-- Card Perfil Social -->
+                <div class="component-item">
+                    <div class="preview-area">
+                        <div class="card-profile-social">
+                            <div class="profile-cover"></div>
+                            <div class="profile-avatar">
+                                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150" alt="Avatar">
+                            </div>
+                            <div class="profile-info">
+                                <h3>María González</h3>
+                                <p>@mariagonzalez</p>
+                                <div class="profile-stats">
+                                    <div class="stat"><strong>1.2K</strong><span>Posts</span></div>
+                                    <div class="stat"><strong>45.8K</strong><span>Followers</span></div>
+                                    <div class="stat"><strong>523</strong><span>Following</span></div>
+                                </div>
+                                <button class="btn-follow">Seguir</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="prompt-box" onclick="copyPrompt(this)">
+                        <code>Social media profile card with cover image gradient background, circular avatar overlapping cover, username, handle, three-column stats display (posts, followers, following), follow button with gradient. Instagram-style, modern social UI design.</code>
+                        <span class="copy-hint">Click para copiar prompt</span>
+                    </div>
+                </div>
+
+                <!-- Card Blog Post -->
+                <div class="component-item">
+                    <div class="preview-area">
+                        <div class="card-blog-post">
+                            <div class="blog-image">
+                                <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=600" alt="Blog">
+                                <span class="category-tag">Tecnología</span>
+                            </div>
+                            <div class="blog-content">
+                                <div class="blog-meta">
+                                    <span class="author">Por Juan Pérez</span>
+                                    <span class="date">15 Jun 2024</span>
+                                </div>
+                                <h3>El Futuro de la Inteligencia Artificial</h3>
+                                <p>Explora las últimas tendencias y avances en IA que están transformando nuestra vida cotidiana...</p>
+                                <a href="#" class="read-more">Leer más →</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="prompt-box" onclick="copyPrompt(this)">
+                        <code>Blog post card with featured image, category tag overlay in corner, author name and date metadata, compelling headline, excerpt text with ellipsis, read more link with arrow. Clean typography, medium shadow, modern blog platform design.</code>
+                        <span class="copy-hint">Click para copiar prompt</span>
+                    </div>
+                </div>
+
+                <!-- Card Pricing -->
+                <div class="component-item">
+                    <div class="preview-area">
+                        <div class="card-pricing popular">
+                            <div class="pricing-header">
+                                <span class="popular-badge">Más Popular</span>
+                                <h3>Profesional</h3>
+                                <div class="price">
+                                    <span class="currency">$</span>
+                                    <span class="amount">29</span>
+                                    <span class="period">/mes</span>
+                                </div>
+                            </div>
+                            <ul class="pricing-features">
+                                <li>✓ 10 Proyectos</li>
+                                <li>✓ 50GB Almacenamiento</li>
+                                <li>✓ Soporte Prioritario</li>
+                                <li>✓ Analytics Avanzado</li>
+                                <li class="disabled">✗ API Access</li>
+                            </ul>
+                            <button class="btn-pricing">Comenzar Ahora</button>
+                        </div>
+                    </div>
+                    <div class="prompt-box" onclick="copyPrompt(this)">
+                        <code>Pricing card with highlighted 'most popular' badge, plan name, large price display with currency and period, checkmark feature list with one disabled item, prominent CTA button. Gradient accent color, clean borders, SaaS pricing page style.</code>
+                        <span class="copy-hint">Click para copiar prompt</span>
+                    </div>
+                </div>
+
+                <!-- Card Testimonio -->
+                <div class="component-item">
+                    <div class="preview-area">
+                        <div class="card-testimonial">
+                            <div class="testimonial-content">
+                                <div class="quote-icon">"</div>
+                                <p>Este producto transformó completamente nuestra forma de trabajar. La interfaz es intuitiva y el soporte es excepcional.</p>
+                            </div>
+                            <div class="testimonial-author">
+                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100" alt="Author">
+                                <div class="author-info">
+                                    <strong>Carlos Rodríguez</strong>
+                                    <span>CEO, TechStart</span>
+                                </div>
+                                <div class="rating">★★★★★</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="prompt-box" onclick="copyPrompt(this)">
+                        <code>Testimonial card with large quote icon, italic testimonial text, circular author avatar, author name and title, 5-star rating display. Light background with subtle pattern, soft shadows, trustworthy review section design.</code>
+                        <span class="copy-hint">Click para copiar prompt</span>
+                    </div>
+                </div>
+
+                <!-- Card Stats Dashboard -->
+                <div class="component-item">
+                    <div class="preview-area">
+                        <div class="card-stats-dashboard">
+                            <div class="stats-icon revenue">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                            </div>
+                            <div class="stats-content">
+                                <p class="stats-label">Ingresos Totales</p>
+                                <h3 class="stats-value">$45,231.89</h3>
+                                <p class="stats-change positive">↑ 20.1% <span>vs mes anterior</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="prompt-box" onclick="copyPrompt(this)">
+                        <code>Dashboard stats card with colored icon background, metric label, large value display, percentage change indicator with up/down arrow and comparison text. Clean grid layout, analytics dashboard style, data visualization UI.</code>
+                        <span class="copy-hint">Click para copiar prompt</span>
+                    </div>
+                </div>
+
+                <!-- Card Glassmorphism -->
+                <div class="component-item">
+                    <div class="preview-area">
+                        <div class="card-glassmorphism">
+                            <div class="glass-content">
+                                <h3>Efecto Cristal</h3>
+                                <p>Diseño moderno con transparencia y desenfoque</p>
+                                <div class="glass-tags">
+                                    <span>#UI</span>
+                                    <span>#Design</span>
+                                    <span>#Modern</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="prompt-box" onclick="copyPrompt(this)">
+                        <code>Glassmorphism card with frosted glass effect, semi-transparent background, backdrop blur, subtle white border, floating over gradient background. Modern iOS-style, depth through transparency, contemporary UI trend.</code>
+                        <span class="copy-hint">Click para copiar prompt</span>
+                    </div>
+                </div>
+
+                <!-- Card Neumorphism -->
+                <div class="component-item">
+                    <div class="preview-area">
+                        <div class="card-neumorphism">
+                            <div class="neu-content">
+                                <h3>Neumorfismo</h3>
+                                <p>Estilo soft UI con sombras sutiles</p>
+                                <button class="btn-neu">Click Me</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="prompt-box" onclick="copyPrompt(this)">
+                        <code>Neumorphic card design with soft extruded shape, subtle light and dark shadows creating depth, same-color background as card surface, pressed button effect. Soft UI style, minimal color palette, tactile appearance.</code>
+                        <span class="copy-hint">Click para copiar prompt</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 2: TABLAS -->
+        <section class="component-section">
+            <h2>📋 Tablas (Data Tables)</h2>
+            
+            <div class="component-grid full-width">
+                <!-- Tabla Básica -->
+                <div class="component-item full-width">
+                    <div class="preview-area">
+                        <div class="table-container">
+                            <table class="table-basic">
+                                <thead>
+                                    <tr>
+                                        <th>Usuario</th>
+                                        <th>Email</th>
+                                        <th>Rol</th>
+                                        <th>Estado</th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="user-cell">
+                                                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=50" alt="User">
+                                                <span>Ana García</span>
+                                            </div>
+                                        </td>
+                                        <td>ana@example.com</td>
+                                        <td>Admin</td>
+                                        <td><span class="status-badge active">Activo</span></td>
+                                        <td>
+                                            <button class="icon-btn">✏️</button>
+                                            <button class="icon-btn">🗑️</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="user-cell">
+                                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=50" alt="User">
+                                                <span>Carlos López</span>
+                                            </div>
+                                        </td>
+                                        <td>carlos@example.com</td>
+                                        <td>Editor</td>
+                                        <td><span class="status-badge pending">Pendiente</span></td>
+                                        <td>
+                                            <button class="icon-btn">✏️</button>
+                                            <button class="icon-btn">🗑️</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="user-cell">
+                                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=50" alt="User">
+                                                <span>María Fernández</span>
+                                            </div>
+                                        </td>
+                                        <td>maria@example.com</td>
+                                        <td>Viewer</td>
+                                        <td><span class="status-badge inactive">Inactivo</span></td>
+                                        <td>
+                                            <button class="icon-btn">✏️</button>
+                                            <button class="icon-btn">🗑️</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="prompt-box" onclick="copyPrompt(this)">
+                        <code>Clean data table with header row, user column with avatar and name, email, role, status badges in different colors, action buttons with icons. Striped rows, hover effects, responsive design, admin dashboard style.</code>
+                        <span class="copy-hint">Click para copiar prompt</span>
+                    </div>
+                </div>
+
+                <!-- Tabla con Ordenamiento -->
+                <div class="component-item full-width">
+                    <div class="preview-area">
+                        <div class="table-container">
+                            <div class="table-header-controls">
+                                <h3>Últimas Transacciones</h3>
+                                <div class="table-actions">
+                                    <input type="text" placeholder="Buscar..." class="table-search">
+                                    <button class="btn-filter">Filtrar ▼</button>
+                                </div>
+                            </div>
+                            <table class="table-sortable">
+                                <thead>
+                                    <tr>
+                                        <th class="sortable">ID ↑↓</th>
+                                        <th class="sortable">Fecha ↑↓</th>
+                                        <th class="sortable">Cliente ↑↓</th>
+                                        <th class="sortable">Monto ↑↓</th>
+                                        <th class="sortable">Estado ↑↓</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>#TRX-001</td>
+                                        <td>15 Jun 2024</td>
+                                        <td>TechCorp Inc.</td>
+                                        <td>$1,250.00</td>
+                                        <td><span class="status-badge success">Completado</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>#TRX-002</td>
+                                        <td>14 Jun 2024</td>
+                                        <td>StartUp Labs</td>
+                                        <td>$890.50</td>
+                                        <td><span class="status-badge warning">Procesando</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>#TRX-003</td>
+                                        <td>14 Jun 2024</td>
+                                        <td>Global Services</td>
+                                        <td>$2,100.00</td>
+                                        <td><span class="status-badge success">Completado</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="prompt-box" onclick="copyPrompt(this)">
+                        <code>Data table with sortable column headers showing up/down arrows, search input, filter button, transaction ID, date, client name, amount, status badges. Professional financial dashboard, clean borders, alternating row colors.</code>
+                        <span class="copy-hint">Click para copiar prompt</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 3: LISTAS -->
+        <section class="component-section">
+            <h2>📝 Listas (Lists)</h2>
+            
+            <div class="component-grid">
+                <!-- Lista Simple -->
+                <div class="component-item">
+                    <div class="preview-area">
+                        <ul class="list-simple">
+                            <li>Elemento de lista 1</li>
+                            <li>Elemento de lista 2</li>
+                            <li>Elemento de lista 3</li>
+                            <li>Elemento de lista 4</li>
+                        </ul>
+                    </div>
+                    <div class="prompt-box" onclick="copyPrompt(this)">
+                        <code>Simple vertical list with clean bullet points or no bullets, consistent spacing between items, subtle divider lines, hover highlight effect. Minimalist list design for content display.</code>
+                        <span class="copy-hint">Click para copiar prompt</span>
+                    </div>
+                </div>
+
+                <!-- Lista con Iconos -->
+                <div class="component-item">
+                    <div class="preview-area">
+                        <ul class="list-icons">
+                            <li><span class="list-icon">✓</span> Característica premium incluida</li>
+                            <li><span class="list-icon">✓</span> Soporte 24/7 disponible</li>
+                            <li><span class="list-icon">✓</span> Actualizaciones gratuitas</li>
+                            <li><span class="list-icon">✓</span> Cancelación en cualquier momento</li>
+                        </ul>
+                    </div>
+                    <div class="prompt-box" onclick="copyPrompt(this)">
+                        <code>Feature list with checkmark icons in colored circles, descriptive text aligned with icons, consistent spacing, benefit-focused copy. Pricing page feature list style, clean and scannable.</code>
+                        <span class="copy-hint">Click para copiar prompt</span>
+                    </div>
+                </div>
+
+                <!-- Lista Interactiva -->
+                <div class="component-item">
+                    <div class="preview-area">
+                        <ul class="list-interactive">
+                            <li class="active">
+                                <span class="list-content">
+                                    <strong>Mensaje 1</strong>
+                                    <small>Visto hace 5 min</small>
+                                </span>
+                                <span class="list-indicator"></span>
+                            </li>
+                            <li>
+                                <span class="list-content">
+                                    <strong>Mensaje 2</strong>
+                                    <small>Visto hace 1 hora</small>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="list-content">
+                                    <strong>Mensaje 3</strong>
+                                    <small>Visto ayer</small>
+                                </span>
+                                <span class="list-badge">3</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="prompt-box" onclick="copyPrompt(this)">
+                        <code>Interactive message list with active state highlighting, bold titles, timestamp subtitles, unread indicator dot, notification badge with count. Email inbox or messaging app style, swipe actions implied.</code>
+                        <span class="copy-hint">Click para copiar prompt</span>
+                    </div>
+                </div>
+
+                <!-- Lista Anidada -->
+                <div class="component-item">
+                    <div class="preview-area">
+                        <ul class="list-nested">
+                            <li>
+                                Categoría Principal
+                                <ul>
+                                    <li>Subcategoría 1</li>
+                                    <li>Subcategoría 2</li>
+                                    <li>
+                                        Subcategoría 3
+                                        <ul>
+                                            <li>Ítem anidado A</li>
+                                            <li>Ítem anidado B</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>Otra Categoría</li>
+                        </ul>
+                    </div>
+                    <div class="prompt-box" onclick="copyPrompt(this)">
+                        <code>Nested list with hierarchical indentation, expandable/collapsible sections, different bullet styles for each level, tree structure navigation. File explorer or documentation sidebar style.</code>
+                        <span class="copy-hint">Click para copiar prompt</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 4: ACORDEÓN -->
+        <section class="component-section">
+            <h2>🎹 Acordeón (Accordion)</h2>
+            
+            <div class="component-grid">
+                <!-- Acordeón Básico -->
+                <div class="component-item full-width">
+                    <div class="preview-area">
+                        <div class="accordion-basic">
+                            <div class="accordion-item">
+                                <button class="accordion-header">
+                                    <span>¿Qué métodos de pago aceptan?</span>
+                                    <span class="accordion-icon">+</span>
+                                </button>
+                                <div class="accordion-content">
+                                    <p>Aceptamos todas las tarjetas de crédito principales (Visa, MasterCard, American Express), PayPal, transferencia bancaria y criptomonedas (Bitcoin, Ethereum).</p>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <button class="accordion-header">
+                                    <span>¿Cuál es el tiempo de envío?</span>
+                                    <span class="accordion-icon">+</span>
+                                </button>
+                                <div class="accordion-content">
+                                    <p>Los envíos nacionales tardan entre 2-5 días hábiles. Los envíos internacionales pueden tomar de 7-15 días hábiles dependiendo del destino.</p>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <button class="accordion-header">
+                                    <span>¿Tienen política de devoluciones?</span>
+                                    <span class="accordion-icon">+</span>
+                                </button>
+                                <div class="accordion-content">
+                                    <p>Sí, ofrecemos devoluciones gratuitas dentro de los 30 días posteriores a la compra. El producto debe estar en su estado original con todas las etiquetas.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="prompt-box" onclick="copyPrompt(this)">
+                        <code>FAQ accordion with clickable headers, plus/minus icon that rotates on expand, smooth collapse/expand animation, clean dividers between items. Help center or FAQ page style, accessible keyboard navigation.</code>
+                        <span class="copy-hint">Click para copiar prompt</span>
+                    </div>
+                </div>
+
+                <!-- Acordeón con Iconos -->
+                <div class="component-item full-width">
+                    <div class="preview-area">
+                        <div class="accordion-icons">
+                            <div class="accordion-item">
+                                <button class="accordion-header">
+                                    <span class="header-icon">📦</span>
+                                    <span>Envío y Entrega</span>
+                                    <span class="accordion-icon">▼</span>
+                                </button>
+                                <div class="accordion-content">
+                                    <p>Información detallada sobre opciones de envío, costos y tiempos de entrega estimados.</p>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <button class="accordion-header">
+                                    <span class="header-icon">💳</span>
+                                    <span>Pagos y Facturación</span>
+                                    <span class="accordion-icon">▼</span>
+                                </button>
+                                <div class="accordion-content">
+                                    <p>Métodos de pago aceptados, seguridad de transacciones y detalles de facturación.</p>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <button class="accordion-header">
+                                    <span class="header-icon">🔒</span>
+                                    <span>Privacidad y Seguridad</span>
+                                    <span class="accordion-icon">▼</span>
+                                </button>
+                                <div class="accordion-content">
+                                    <p>Cómo protegemos tus datos personales y políticas de privacidad.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="prompt-box" onclick="copyPrompt(this)">
+                        <code>Accordion with emoji or icon indicators for each section, section titles, chevron rotation animation, colorful icon backgrounds. Modern settings page or knowledge base style.</code>
+                        <span class="copy-hint">Click para copiar prompt</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 5: BADGES/TAGS -->
+        <section class="component-section">
+            <h2>🏷️ Etiquetas (Badges/Tags)</h2>
+            
+            <div class="component-grid">
+                <!-- Badges de Estado -->
+                <div class="component-item">
+                    <div class="preview-area">
+                        <div class="badges-container">
+                            <span class="badge badge-success">Éxito</span>
+                            <span class="badge badge-error">Error</span>
+                            <span class="badge badge-warning">Advertencia</span>
+                            <span class="badge badge-info">Info</span>
+                            <span class="badge badge-neutral">Neutral</span>
+                        </div>
+                    </div>
+                    <div class="prompt-box" onclick="copyPrompt(this)">
+                        <code>Status badge set with success green, error red, warning yellow, info blue, neutral gray colors. Rounded pill shape, small text, subtle background with darker border. UI status indicators.</code>
+                        <span class="copy-hint">Click para copiar prompt</span>
+                    </div>
+                </div>
+
+                <!-- Tags Removibles -->
+                <div class="component-item">
+                    <div class="preview-area">
+                        <div class="tags-container">
+                            <span class="tag-removable">
+                                Diseño UX
+                                <button class="tag-close">×</button>
+                            </span>
+                            <span class="tag-removable">
+                                Frontend
+                                <button class="tag-close">×</button>
+                            </span>
+                            <span class="tag-removable">
+                                React
+                                <button class="tag-close">×</button>
+                            </span>
+                            <span class="tag-removable">
+                                CSS
+                                <button class="tag-close">×</button>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="prompt-box" onclick="copyPrompt(this)">
+                        <code>Removable tags with close button (x icon) on hover, light background with colored border, pill shape, multi-select input style. Filter tags or selected interests display.</code>
+                        <span class="copy-hint">Click para copiar prompt</span>
+                    </div>
+                </div>
+
+                <!-- Badges con Contador -->
+                <div class="component-item">
+                    <div class="preview-area">
+                        <div class="badges-count-container">
+                            <button class="btn-with-badge">
+                                Mensajes
+                                <span class="badge-count">12</span>
+                            </button>
+                            <button class="btn-with-badge">
+                                Notificaciones
+                                <span class="badge-count hot">99+</span>
+                            </button>
+                            <button class="btn-with-badge">
+                                Tareas
+                                <span class="badge-count">3</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="prompt-box" onclick="copyPrompt(this)">
+                        <code>Notification badges with red circular counter overlaid on button corner, white numbers on bright red background, some showing 99+ for overflow. App notification indicator style.</code>
+                        <span class="copy-hint">Click para copiar prompt</span>
+                    </div>
+                </div>
+
+                <!-- Tags de Categoría -->
+                <div class="component-item">
+                    <div class="preview-area">
+                        <div class="category-tags">
+                            <span class="category-tag tech">Tecnología</span>
+                            <span class="category-tag design">Diseño</span>
+                            <span class="category-tag business">Negocios</span>
+                            <span class="category-tag marketing">Marketing</span>
+                            <span class="category-tag development">Desarrollo</span>
+                        </div>
+                    </div>
+                    <div class="prompt-box" onclick="copyPrompt(this)">
+                        <code>Category tags with different background colors per category, rounded rectangles, white text, blog post category labels or filter chips. Color-coded organization system.</code>
+                        <span class="copy-hint">Click para copiar prompt</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 6: TOOLTIPS -->
+        <section class="component-section">
+            <h2>💬 Tooltips</h2>
+            
+            <div class="component-grid">
+                <!-- Tooltip Básico -->
+                <div class="component-item">
+                    <div class="preview-area tooltip-preview">
+                        <button class="btn-tooltip" data-tooltip="Información adicional aquí">
+                            Pasa el cursor
+                        </button>
+                    </div>
+                    <div class="prompt-box" onclick="copyPrompt(this)">
+                        <code>Tooltip appearing on hover, dark semi-transparent background, white text, small triangle pointer, positioned above trigger element. Micro-interaction, helpful hint display.</code>
+                        <span class="copy-hint">Click para copiar prompt</span>
+                    </div>
+                </div>
+
+                <!-- Tooltip con Icono -->
+                <div class="component-item">
+                    <div class="preview-area tooltip-preview">
+                        <span class="info-icon" data-tooltip="ℹ️ Click para más información">ℹ️</span>
+                    </div>
+                    <div class="prompt-box" onclick="copyPrompt(this)">
+                        <code>Information icon tooltip with emoji or icon in tooltip content, light background, subtle shadow, appears on click or hover. Help text indicator style.</code>
+                        <span class="copy-hint">Click para copiar prompt</span>
+                    </div>
+                </div>
+
+                <!-- Tooltip Rico -->
+                <div class="component-item">
+                    <div class="preview-area tooltip-preview">
+                        <button class="btn-rich-tooltip" data-tooltip-title="Atajo de teclado" data-tooltip-desc="Presiona Ctrl + S para guardar">
+                            Ver Atajo
+                        </button>
+                    </div>
+                    <div class="prompt-box" onclick="copyPrompt(this)">
+                        <code>Rich tooltip with title in bold, description text below, keyboard shortcut display in code style box, two-tone background. Advanced tooltip for power users.</code>
+                        <span class="copy-hint">Click para copiar prompt</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 7: AVATARES -->
+        <section class="component-section">
+            <h2>👤 Avatares</h2>
+            
+            <div class="component-grid">
+                <!-- Avatar Simple -->
+                <div class="component-item">
+                    <div class="preview-area">
+                        <div class="avatar-group-simple">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100" alt="User" class="avatar">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100" alt="User" class="avatar">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100" alt="User" class="avatar">
+                            <div class="avatar avatar-more">+5</div>
+                        </div>
+                    </div>
+                    <div class="prompt-box" onclick="copyPrompt(this)">
+                        <code>Avatar group with overlapping circular images, white border around each avatar, '+N' badge for additional members, team collaboration display. Project members or online participants indicator.</code>
+                        <span class="copy-hint">Click para copiar prompt</span>
+                    </div>
+                </div>
+
+                <!-- Avatar con Estado -->
+                <div class="component-item">
+                    <div class="preview-area">
+                        <div class="avatar-status-group">
+                            <div class="avatar-wrapper">
+                                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100" alt="User" class="avatar">
+                                <span class="status-dot online"></span>
+                            </div>
+                            <div class="avatar-wrapper">
+                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100" alt="User" class="avatar">
+                                <span class="status-dot away"></span>
+                            </div>
+                            <div class="avatar-wrapper">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100" alt="User" class="avatar">
+                                <span class="status-dot busy"></span>
+                            </div>
+                            <div class="avatar-wrapper">
+                                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100" alt="User" class="avatar">
+                                <span class="status-dot offline"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="prompt-box" onclick="copyPrompt(this)">
+                        <code>User avatars with status indicator dots (green online, yellow away, red busy, gray offline) positioned bottom-right of circular avatar. Team availability display, chat application style.</code>
+                        <span class="copy-hint">Click para copiar prompt</span>
+                    </div>
+                </div>
+
+                <!-- Avatar con Iniciales -->
+                <div class="component-item">
+                    <div class="preview-area">
+                        <div class="avatar-initials-group">
+                            <div class="avatar avatar-initials" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">MG</div>
+                            <div class="avatar avatar-initials" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">CR</div>
+                            <div class="avatar avatar-initials" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">JL</div>
+                            <div class="avatar avatar-initials" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">AP</div>
+                        </div>
+                    </div>
+                    <div class="prompt-box" onclick="copyPrompt(this)">
+                        <code>Avatar placeholders with user initials on colorful gradient backgrounds, circular shape, white bold text, fallback when no photo available. User profile default image style.</code>
+                        <span class="copy-hint">Click para copiar prompt</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 8: TIMELINE -->
+        <section class="component-section">
+            <h2>⏱️ Línea de Tiempo (Timeline)</h2>
+            
+            <div class="component-grid full-width">
+                <div class="component-item full-width">
+                    <div class="preview-area">
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-marker completed"></div>
+                                <div class="timeline-content">
+                                    <h4>Pedido Confirmado</h4>
+                                    <p>15 Jun 2024, 10:30 AM</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-marker completed"></div>
+                                <div class="timeline-content">
+                                    <h4>En Preparación</h4>
+                                    <p>15 Jun 2024, 2:15 PM</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-marker current"></div>
+                                <div class="timeline-content">
+                                    <h4>Enviado</h4>
+                                    <p>16 Jun 2024, 9:00 AM</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <h4>En Tránsito</h4>
+                                    <p>Pendiente</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <h4>Entregado</h4>
+                                    <p>Pendiente</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="prompt-box" onclick="copyPrompt(this)">
+                        <code>Order tracking timeline with connected vertical line, circular markers showing completed (filled), current (pulsing), and pending states, step title and timestamp. Progress tracker, shipping status display.</code>
+                        <span class="copy-hint">Click para copiar prompt</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="../../assets/js/utils.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

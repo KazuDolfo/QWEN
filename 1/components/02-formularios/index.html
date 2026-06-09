@@ -3,261 +3,606 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UI/UX Mega Collection - Formularios</title>
+    <title>02. Formularios - UI/UX Mega Collection</title>
     <link rel="stylesheet" href="../../assets/css/global.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <nav class="back-nav">
+        <a href="../../index.html" class="back-btn">← Volver al Índice</a>
+        <h1>📝 Componentes de Formularios</h1>
+    </nav>
+
     <div class="container">
-        <header class="page-header">
-            <h1>📝 2. Controles de Entrada (Formularios)</h1>
-            <p>Permiten al usuario ingresar datos o realizar acciones.</p>
-        </header>
+        <section class="section">
+            <h2 class="section-title">Inputs de Texto</h2>
+            <p class="section-subtitle">Campos básicos para nombres, emails, contraseñas y más</p>
+            
+            <div class="components-grid">
+                <!-- Input Básico -->
+                <div class="component-card">
+                    <div class="component-preview">
+                        <div class="input-wrapper">
+                            <label class="input-label">Nombre Completo</label>
+                            <input type="text" class="input-basic" placeholder="Ej: Juan Pérez">
+                        </div>
+                    </div>
+                    <div class="component-info">
+                        <h3>Input Básico</h3>
+                        <p>Campo de texto simple con borde suave y focus animado</p>
+                        <span class="prompt-label">🤖 Prompt para IA:</span>
+                        <div class="prompt-box" onclick="copyPrompt(this)">Create a modern text input field with soft border, subtle shadow on focus, smooth transition effect, clean minimalist design, light gray border #e5e7eb, blue focus ring #4f46e5, rounded corners 8px, padding 12px 16px, font Inter sans-serif</div>
+                    </div>
+                </div>
 
-        <!-- INPUTS DE TEXTO -->
-        <section class="component-section">
-            <h2>Input de Texto</h2>
-            <div class="component-grid">
+                <!-- Input con Icono -->
                 <div class="component-card">
-                    <div class="preview">
-                        <div class="input-group">
-                            <label>Nombre Completo</label>
-                            <input type="text" class="input-classic" placeholder="Ej: Juan Pérez">
+                    <div class="component-preview">
+                        <div class="input-wrapper">
+                            <label class="input-label">Email</label>
+                            <div class="input-with-icon">
+                                <span class="input-icon">📧</span>
+                                <input type="email" class="input-basic" placeholder="tu@email.com">
+                            </div>
                         </div>
                     </div>
-                    <div class="prompt-box" onclick="copyPrompt(this)">
-                        <code>Classic text input field with clean border, subtle focus state with primary color glow, rounded corners, modern form design, label above input, placeholder text in light gray, accessible contrast ratios</code>
+                    <div class="component-info">
+                        <h3>Input con Icono</h3>
+                        <p>Campo de texto con icono integrado a la izquierda</p>
+                        <span class="prompt-label">🤖 Prompt para IA:</span>
+                        <div class="prompt-box" onclick="copyPrompt(this)">Design a text input field with integrated left icon, email symbol, modern clean style, icon in gray color #9ca3af, input border #e5e7eb, focus state with blue glow, rounded corners, proper spacing between icon and text, responsive design</div>
                     </div>
                 </div>
+
+                <!-- Input Floating Label -->
                 <div class="component-card">
-                    <div class="preview">
-                        <div class="input-floating">
-                            <input type="text" id="float-input" placeholder=" " required>
-                            <label for="float-input">Email</label>
+                    <div class="component-preview">
+                        <div class="input-wrapper">
+                            <div class="input-floating">
+                                <input type="text" id="floating-input" placeholder=" " required>
+                                <label for="floating-input">Usuario</label>
+                            </div>
                         </div>
                     </div>
-                    <div class="prompt-box" onclick="copyPrompt(this)">
-                        <code>Floating label input field, Material Design style, label animates to top when focused or filled, clean minimalist design, smooth transitions, modern form UX pattern, Google Forms inspired</code>
+                    <div class="component-info">
+                        <h3>Floating Label</h3>
+                        <p>Etiqueta que flota al escribir, estilo Material Design</p>
+                        <span class="prompt-label">🤖 Prompt para IA:</span>
+                        <div class="prompt-box" onclick="copyPrompt(this)">Material Design floating label input field, label animates to top when typing, clean modern aesthetic, thin border, smooth CSS transitions, purple accent color, minimalist design, accessible form element</div>
                     </div>
                 </div>
+
+                <!-- Input con Validación -->
                 <div class="component-card">
-                    <div class="preview">
-                        <div class="input-icon">
-                            <span class="input-icon-left">🔍</span>
-                            <input type="text" placeholder="Buscar...">
+                    <div class="component-preview">
+                        <div class="input-wrapper">
+                            <label class="input-label">Contraseña</label>
+                            <input type="password" class="input-basic input-error" value="123" placeholder="Mínimo 8 caracteres">
+                            <span class="error-message">❌ La contraseña es muy corta</span>
                         </div>
                     </div>
-                    <div class="prompt-box" onclick="copyPrompt(this)">
-                        <code>Search input with icon inside field, magnifying glass icon on left, rounded pill shape, subtle shadow, modern search bar design, e-commerce style, clean and functional</code>
+                    <div class="component-info">
+                        <h3>Input con Validación</h3>
+                        <p>Muestra estado de error con mensaje y borde rojo</p>
+                        <span class="prompt-label">🤖 Prompt para IA:</span>
+                        <div class="prompt-box" onclick="copyPrompt(this)">Form input with validation error state, red border #ef4444, error message below field with warning icon, modern clean design, helpful error text, accessible form validation UI, smooth transitions</div>
                     </div>
                 </div>
+
+                <!-- Input Success -->
                 <div class="component-card">
-                    <div class="preview">
-                        <div class="input-underlined">
-                            <label>Contraseña</label>
-                            <input type="password" class="input-underline-style" placeholder="••••••••">
+                    <div class="component-preview">
+                        <div class="input-wrapper">
+                            <label class="input-label">Email Verificado</label>
+                            <input type="email" class="input-basic input-success" value="usuario@ejemplo.com">
+                            <span class="success-message">✓ Email válido</span>
                         </div>
                     </div>
-                    <div class="prompt-box" onclick="copyPrompt(this)">
-                        <code>Underlined input field, minimal design with bottom border only, material design inspired, animated underline on focus, clean and elegant, saves visual space, modern login form style</code>
+                    <div class="component-info">
+                        <h3>Input Success</h3>
+                        <p>Estado exitoso con borde verde y checkmark</p>
+                        <span class="prompt-label">🤖 Prompt para IA:</span>
+                        <div class="prompt-box" onclick="copyPrompt(this)">Form input with success validation state, green border #10b981, checkmark icon, success message below, clean modern design, positive feedback UI, smooth animations</div>
+                    </div>
+                </div>
+
+                <!-- Input Disabled -->
+                <div class="component-card">
+                    <div class="component-preview">
+                        <div class="input-wrapper">
+                            <label class="input-label">Código (Deshabilitado)</label>
+                            <input type="text" class="input-basic input-disabled" value="ABC123" disabled>
+                        </div>
+                    </div>
+                    <div class="component-info">
+                        <h3>Input Disabled</h3>
+                        <p>Estado deshabilitado con fondo gris y cursor not-allowed</p>
+                        <span class="prompt-label">🤖 Prompt para IA:</span>
+                        <div class="prompt-box" onclick="copyPrompt(this)">Disabled form input field, gray background #f3f4f6, muted text color, not-allowed cursor, subtle border, clear visual indication of disabled state, accessible design patterns</div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- TEXTAREA -->
-        <section class="component-section">
-            <h2>Textarea</h2>
-            <div class="component-grid">
-                <div class="component-card full-width">
-                    <div class="preview">
-                        <div class="textarea-group">
-                            <label>Comentarios</label>
-                            <textarea class="textarea-classic" rows="4" placeholder="Escribe tu comentario aquí..."></textarea>
-                            <div class="char-counter"><span id="current">0</span>/500</div>
+        <!-- Textarea Section -->
+        <section class="section">
+            <h2 class="section-title">Textarea</h2>
+            <p class="section-subtitle">Áreas de texto multilínea para comentarios, descripciones y más</p>
+            
+            <div class="components-grid">
+                <!-- Textarea Básico -->
+                <div class="component-card">
+                    <div class="component-preview">
+                        <div class="input-wrapper">
+                            <label class="input-label">Comentario</label>
+                            <textarea class="textarea-basic" rows="4" placeholder="Escribe tu comentario aquí..."></textarea>
                         </div>
                     </div>
-                    <div class="prompt-box" onclick="copyPrompt(this)">
-                        <code>Textarea with character counter, modern comment box design, rounded corners, subtle border, counter updates in real-time, focus state with color accent, blog comment section style</code>
+                    <div class="component-info">
+                        <h3>Textarea Básico</h3>
+                        <p>Área de texto simple con resize vertical</p>
+                        <span class="prompt-label">🤖 Prompt para IA:</span>
+                        <div class="prompt-box" onclick="copyPrompt(this)">Modern textarea component, multi-line text input, clean borders, subtle focus state, resizable vertically only, light gray background, smooth transitions, professional form design</div>
+                    </div>
+                </div>
+
+                <!-- Textarea con Contador -->
+                <div class="component-card">
+                    <div class="component-preview">
+                        <div class="input-wrapper">
+                            <label class="input-label">Descripción <span class="char-count">0/200</span></label>
+                            <textarea class="textarea-basic" id="textarea-counter" rows="4" maxlength="200" placeholder="Describe tu producto..."></textarea>
+                        </div>
+                    </div>
+                    <div class="component-info">
+                        <h3>Textarea con Contador</h3>
+                        <p>Muestra caracteres restantes en tiempo real</p>
+                        <span class="prompt-label">🤖 Prompt para IA:</span>
+                        <div class="prompt-box" onclick="copyPrompt(this)">Textarea with character counter, real-time count display, max length indicator, modern clean design, counter changes color near limit, user-friendly form element, accessible UX pattern</div>
+                    </div>
+                </div>
+
+                <!-- Textarea Auto-resize -->
+                <div class="component-card">
+                    <div class="component-preview">
+                        <div class="input-wrapper">
+                            <label class="input-label">Mensaje (Auto-resize)</label>
+                            <textarea class="textarea-basic textarea-auto" rows="1" placeholder="Escribe y crecerá automáticamente..."></textarea>
+                        </div>
+                    </div>
+                    <div class="component-info">
+                        <h3>Textarea Auto-resize</h3>
+                        <p>Se expande automáticamente según el contenido</p>
+                        <span class="prompt-label">🤖 Prompt para IA:</span>
+                        <div class="prompt-box" onclick="copyPrompt(this)">Auto-resizing textarea component, expands automatically as user types, smooth height animation, no scrollbar needed, modern clean design, JavaScript-enhanced UX, professional form element</div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- CHECKBOX & RADIO -->
-        <section class="component-section">
-            <h2>Checkbox & Radio Button</h2>
-            <div class="component-grid">
+        <!-- Checkbox & Radio Section -->
+        <section class="section">
+            <h2 class="section-title">Checkbox y Radio Buttons</h2>
+            <p class="section-subtitle">Selección múltiple y única con diseños personalizados</p>
+            
+            <div class="components-grid">
+                <!-- Checkbox Básico -->
                 <div class="component-card">
-                    <div class="preview">
+                    <div class="component-preview">
                         <div class="checkbox-group">
                             <label class="checkbox-custom">
                                 <input type="checkbox" checked>
                                 <span class="checkmark"></span>
-                                Acepto términos
-                            </label>
-                            <label class="checkbox-custom">
-                                <input type="checkbox">
-                                <span class="checkmark"></span>
-                                Suscribirse
+                                Acepto términos y condiciones
                             </label>
                         </div>
                     </div>
-                    <div class="prompt-box" onclick="copyPrompt(this)">
-                        <code>Custom checkbox design with rounded squares, checkmark animation, primary color when selected, clean modern style, accessible touch targets, form element with smooth transitions</code>
+                    <div class="component-info">
+                        <h3>Checkbox Personalizado</h3>
+                        <p>Diseño custom con animación de check</p>
+                        <span class="prompt-label">🤖 Prompt para IA:</span>
+                        <div class="prompt-box" onclick="copyPrompt(this)">Custom checkbox design, smooth checkmark animation, modern rounded square, blue primary color #4f46e5 when checked, clean minimal style, accessible form control, hover and focus states</div>
                     </div>
                 </div>
+
+                <!-- Checkbox Switch -->
                 <div class="component-card">
-                    <div class="preview">
+                    <div class="component-preview">
+                        <div class="checkbox-group">
+                            <label class="switch">
+                                <input type="checkbox" checked>
+                                <span class="slider"></span>
+                            </label>
+                            <span class="switch-label">Modo Oscuro</span>
+                        </div>
+                    </div>
+                    <div class="component-info">
+                        <h3>Toggle Switch</h3>
+                        <p>Interruptor deslizante para activar/desactivar</p>
+                        <span class="prompt-label">🤖 Prompt para IA:</span>
+                        <div class="prompt-box" onclick="copyPrompt(this)">iOS-style toggle switch, smooth sliding animation, green when enabled, gray when disabled, pill-shaped track, circular thumb, modern mobile-inspired design, accessible toggle control</div>
+                    </div>
+                </div>
+
+                <!-- Radio Button -->
+                <div class="component-card">
+                    <div class="component-preview">
                         <div class="radio-group">
                             <label class="radio-custom">
                                 <input type="radio" name="plan" checked>
-                                <span class="radiomark"></span>
+                                <span class="radio-mark"></span>
                                 Básico
                             </label>
                             <label class="radio-custom">
                                 <input type="radio" name="plan">
-                                <span class="radiomark"></span>
+                                <span class="radio-mark"></span>
                                 Premium
+                            </label>
+                            <label class="radio-custom">
+                                <input type="radio" name="plan">
+                                <span class="radio-mark"></span>
+                                Enterprise
                             </label>
                         </div>
                     </div>
-                    <div class="prompt-box" onclick="copyPrompt(this)">
-                        <code>Custom radio button design, circular selection indicators, smooth fill animation, pricing plan selector style, modern form element, clear selected state, accessible design</code>
+                    <div class="component-info">
+                        <h3>Radio Buttons</h3>
+                        <p>Selección única entre múltiples opciones</p>
+                        <span class="prompt-label">🤖 Prompt para IA:</span>
+                        <div class="prompt-box" onclick="copyPrompt(this)">Custom radio button group, circular selection indicators, filled dot when selected, blue accent color, clean modern design, proper spacing between options, accessible form controls, hover effects</div>
+                    </div>
+                </div>
+
+                <!-- Checkbox Cards -->
+                <div class="component-card">
+                    <div class="component-preview">
+                        <div class="checkbox-cards">
+                            <label class="checkbox-card">
+                                <input type="checkbox" checked>
+                                <div class="card-content">
+                                    <span class="card-icon">🚀</span>
+                                    <span>Rápido</span>
+                                </div>
+                            </label>
+                            <label class="checkbox-card">
+                                <input type="checkbox">
+                                <div class="card-content">
+                                    <span class="card-icon">💪</span>
+                                    <span>Potente</span>
+                                </div>
+                            </label>
+                            <label class="checkbox-card">
+                                <input type="checkbox">
+                                <div class="card-content">
+                                    <span class="card-icon">🔒</span>
+                                    <span>Seguro</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="component-info">
+                        <h3>Checkbox Cards</h3>
+                        <p>Tarjetas seleccionables con iconos</p>
+                        <span class="prompt-label">🤖 Prompt para IA:</span>
+                        <div class="prompt-box" onclick="copyPrompt(this)">Selectable card checkboxes, grid layout with icons, highlighted border when selected, modern card design with shadow, checkmark indicator in corner, colorful icons, interactive hover states, responsive grid</div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- SWITCH TOGGLE -->
-        <section class="component-section">
-            <h2>Switch (Toggle)</h2>
-            <div class="component-grid">
+        <!-- Select & Dropdown Section -->
+        <section class="section">
+            <h2 class="section-title">Dropdowns y Selects</h2>
+            <p class="section-subtitle">Listas desplegables para selección de opciones</p>
+            
+            <div class="components-grid">
+                <!-- Select Básico -->
                 <div class="component-card">
-                    <div class="preview">
-                        <label class="switch">
-                            <input type="checkbox" checked>
-                            <span class="slider"></span>
-                        </label>
-                        <span style="margin-left: 15px;">Modo Oscuro</span>
+                    <div class="component-preview">
+                        <div class="input-wrapper">
+                            <label class="input-label">País</label>
+                            <select class="select-basic">
+                                <option>Selecciona un país</option>
+                                <option>🇦🇷 Argentina</option>
+                                <option>🇨🇱 Chile</option>
+                                <option>🇨🇴 Colombia</option>
+                                <option>🇪🇸 España</option>
+                                <option>🇲🇽 México</option>
+                                <option>🇵🇪 Perú</option>
+                            </select>
+                        </div>
                     </div>
-                    <div class="prompt-box" onclick="copyPrompt(this)">
-                        <code>iOS style toggle switch, smooth sliding animation, green when enabled, clean circular thumb, modern settings UI, dark mode toggle, mobile-friendly touch target, accessible form control</code>
+                    <div class="component-info">
+                        <h3>Select Básico</h3>
+                        <p>Dropdown nativo estilizado con flecha custom</p>
+                        <span class="prompt-label">🤖 Prompt para IA:</span>
+                        <div class="prompt-box" onclick="copyPrompt(this)">Custom styled select dropdown, native HTML select with modern appearance, custom arrow icon, clean borders, focus state with color accent, option flags, professional form design, accessible dropdown</div>
                     </div>
                 </div>
-                <div class="component-card">
-                    <div class="preview">
-                        <label class="switch-neon">
-                            <input type="checkbox" checked>
-                            <span class="slider-neon"></span>
-                        </label>
-                        <span style="margin-left: 15px; color: #8b5cf6;">Activado</span>
-                    </div>
-                    <div class="prompt-box" onclick="copyPrompt(this)">
-                        <code>Neon glow toggle switch, cyberpunk aesthetic, purple and pink gradient, glowing effect when active, futuristic design, gaming UI style, eye-catching form element</code>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- DROPDOWN SELECT -->
-        <section class="component-section">
-            <h2>Dropdown (Select)</h2>
-            <div class="component-grid">
+                <!-- Multi Select -->
                 <div class="component-card">
-                    <div class="preview">
-                        <select class="select-classic">
-                            <option>Selecciona una opción</option>
-                            <option>Opción 1</option>
-                            <option>Opción 2</option>
-                            <option>Opción 3</option>
-                        </select>
-                    </div>
-                    <div class="prompt-box" onclick="copyPrompt(this)">
-                        <code>Custom select dropdown, styled native select with arrow icon, clean borders, hover and focus states, modern form design, consistent with other inputs, accessible keyboard navigation</code>
-                    </div>
-                </div>
-                <div class="component-card">
-                    <div class="preview">
-                        <div class="custom-select">
-                            <button class="select-btn">🇪🇸 Español ▾</button>
-                            <div class="select-options">
-                                <option data-flag="🇺🇸">English</option>
-                                <option data-flag="🇫🇷">Français</option>
-                                <option data-flag="🇩🇪">Deutsch</option>
+                    <div class="component-preview">
+                        <div class="input-wrapper">
+                            <label class="input-label">Intereses (Multi-select)</label>
+                            <div class="multi-select">
+                                <div class="selected-tags">
+                                    <span class="tag">Diseño ×</span>
+                                    <span class="tag">Frontend ×</span>
+                                </div>
+                                <select multiple class="select-multiple">
+                                    <option>Diseño</option>
+                                    <option>Frontend</option>
+                                    <option>Backend</option>
+                                    <option>DevOps</option>
+                                    <option>Mobile</option>
+                                </select>
                             </div>
                         </div>
                     </div>
-                    <div class="prompt-box" onclick="copyPrompt(this)">
-                        <code>Language selector dropdown with flags, custom styled select button, options appear on click, modern i18n UI pattern, clean animations, user-friendly language switcher</code>
+                    <div class="component-info">
+                        <h3>Multi-Select con Tags</h3>
+                        <p>Selección múltiple con tags removibles</p>
+                        <span class="prompt-label">🤖 Prompt para IA:</span>
+                        <div class="prompt-box" onclick="copyPrompt(this)">Multi-select dropdown with tags, selected items shown as removable pills, clean tag design with X button, dropdown list below, modern interface, tag colors, searchable options, user-friendly multi-selection</div>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <!-- SLIDER RANGE -->
-        <section class="component-section">
-            <h2>Slider (Range)</h2>
-            <div class="component-grid">
-                <div class="component-card full-width">
-                    <div class="preview">
-                        <div class="slider-group">
-                            <label>Precio: $<span id="price-value">500</span></label>
-                            <input type="range" class="range-slider" min="0" max="1000" value="500" oninput="document.getElementById('price-value').textContent=this.value">
-                        </div>
-                    </div>
-                    <div class="prompt-box" onclick="copyPrompt(this)">
-                        <code>Range slider with value display, gradient track fill, circular thumb that scales on hover, price filter design, e-commerce filter UI, smooth dragging experience, modern form control</code>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- DATE PICKER -->
-        <section class="component-section">
-            <h2>Date Picker</h2>
-            <div class="component-grid">
+                <!-- Searchable Dropdown -->
                 <div class="component-card">
-                    <div class="preview">
-                        <div class="date-picker">
-                            <input type="date" class="input-date">
+                    <div class="component-preview">
+                        <div class="input-wrapper">
+                            <label class="input-label">Buscar Ciudad</label>
+                            <div class="searchable-dropdown">
+                                <div class="dropdown-input">
+                                    <input type="text" placeholder="Escribe para buscar...">
+                                    <span class="dropdown-arrow">▼</span>
+                                </div>
+                                <div class="dropdown-list">
+                                    <div class="dropdown-item">🏙️ Buenos Aires</div>
+                                    <div class="dropdown-item">🏙️ Santiago</div>
+                                    <div class="dropdown-item">🏙️ Bogotá</div>
+                                    <div class="dropdown-item">🏙️ Madrid</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="prompt-box" onclick="copyPrompt(this)">
-                        <code>Date picker input with calendar icon, clean modern styling, native date selector, accessible form control, booking form style, clear date format display</code>
+                    <div class="component-info">
+                        <h3>Dropdown Buscable</h3>
+                        <p>Combina input de búsqueda con lista desplegable</p>
+                        <span class="prompt-label">🤖 Prompt para IA:</span>
+                        <div class="prompt-box" onclick="copyPrompt(this)">Searchable dropdown component, text input with autocomplete, filtered results list, city names with icons, modern clean design, smooth dropdown animation, highlight matching text, keyboard navigation support</div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- FILE UPLOADER -->
-        <section class="component-section">
-            <h2>File Uploader</h2>
-            <div class="component-grid">
-                <div class="component-card full-width">
-                    <div class="preview">
-                        <div class="file-upload">
-                            <input type="file" id="file-input" hidden>
-                            <label for="file-input" class="upload-area">
-                                <span class="upload-icon">📁</span>
-                                <p>Arrastra archivos aquí o haz click para seleccionar</p>
-                                <small>PDF, PNG, JPG hasta 10MB</small>
-                            </label>
+        <!-- Slider & Range Section -->
+        <section class="section">
+            <h2 class="section-title">Sliders y Rangos</h2>
+            <p class="section-subtitle">Controles deslizantes para selección de valores numéricos</p>
+            
+            <div class="components-grid">
+                <!-- Slider Básico -->
+                <div class="component-card">
+                    <div class="component-preview">
+                        <div class="input-wrapper">
+                            <label class="input-label">Volumen: <span class="range-value">50%</span></label>
+                            <input type="range" class="range-slider" min="0" max="100" value="50">
                         </div>
                     </div>
-                    <div class="prompt-box" onclick="copyPrompt(this)">
-                        <code>Drag and drop file upload area, dashed border, cloud upload icon, modern file uploader design, hover state indication, clear instructions, multiple file support UI, clean dropzone</code>
+                    <div class="component-info">
+                        <h3>Slider Básico</h3>
+                        <p>Control de rango con valor en tiempo real</p>
+                        <span class="prompt-label">🤖 Prompt para IA:</span>
+                        <div class="prompt-box" onclick="copyPrompt(this)">Modern range slider, gradient colored track, circular thumb handle, value display updates in real-time, smooth dragging animation, clean minimal design, blue to purple gradient, accessible range input</div>
+                    </div>
+                </div>
+
+                <!-- Double Slider -->
+                <div class="component-card">
+                    <div class="component-preview">
+                        <div class="input-wrapper">
+                            <label class="input-label">Rango de Precio: $<span class="range-min">100</span> - $<span class="range-max">800</span></label>
+                            <div class="double-slider">
+                                <div class="slider-track"></div>
+                                <div class="slider-thumb thumb-min"></div>
+                                <div class="slider-thumb thumb-max"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="component-info">
+                        <h3>Double Slider</h3>
+                        <p>Dos controles para seleccionar rango mínimo y máximo</p>
+                        <span class="prompt-label">🤖 Prompt para IA:</span>
+                        <div class="prompt-box" onclick="copyPrompt(this)">Double-ended range slider, two draggable handles for min and max values, highlighted section between handles, price range display, modern clean design, smooth drag interaction, blue gradient fill, e-commerce filter UI</div>
+                    </div>
+                </div>
+
+                <!-- Vertical Slider -->
+                <div class="component-card">
+                    <div class="component-preview">
+                        <div class="vertical-sliders">
+                            <div class="vertical-slider-wrapper">
+                                <input type="range" class="range-slider vertical" min="0" max="100" value="75" orient="vertical">
+                                <span>Bajo</span>
+                            </div>
+                            <div class="vertical-slider-wrapper">
+                                <input type="range" class="range-slider vertical" min="0" max="100" value="50" orient="vertical">
+                                <span>Medio</span>
+                            </div>
+                            <div class="vertical-slider-wrapper">
+                                <input type="range" class="range-slider vertical" min="0" max="100" value="25" orient="vertical">
+                                <span>Alto</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="component-info">
+                        <h3>Sliders Verticales</h3>
+                        <p>Múltiples sliders en orientación vertical</p>
+                        <span class="prompt-label">🤖 Prompt para IA:</span>
+                        <div class="prompt-box" onclick="copyPrompt(this)">Vertical range sliders group, three parallel sliders, equalizer-style interface, gradient colored tracks, circular handles, labels below each slider, modern audio control design, smooth animations</div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <footer class="page-footer">
-            <p>✅ 8 subcategorías de formularios completadas | +35 diseños únicos</p>
-            <p class="tip">💡 Tip UX: Los formularios deben tener validación en tiempo real y mensajes de error claros.</p>
-        </footer>
+        <!-- Date Picker Section -->
+        <section class="section">
+            <h2 class="section-title">Date Pickers</h2>
+            <p class="section-subtitle">Selectores de fecha y hora</p>
+            
+            <div class="components-grid">
+                <!-- Date Input -->
+                <div class="component-card">
+                    <div class="component-preview">
+                        <div class="input-wrapper">
+                            <label class="input-label">Fecha de Nacimiento</label>
+                            <input type="date" class="input-basic date-input">
+                        </div>
+                    </div>
+                    <div class="component-info">
+                        <h3>Date Input Nativo</h3>
+                        <p>Selector de fecha del navegador estilizado</p>
+                        <span class="prompt-label">🤖 Prompt para IA:</span>
+                        <div class="prompt-box" onclick="copyPrompt(this)">Styled native date picker input, calendar icon, clean border, modern appearance, formatted date display, focus state with accent color, accessible date selection, cross-browser compatible design</div>
+                    </div>
+                </div>
+
+                <!-- Date Range -->
+                <div class="component-card">
+                    <div class="component-preview">
+                        <div class="input-wrapper">
+                            <label class="input-label">Rango de Fechas</label>
+                            <div class="date-range">
+                                <input type="date" class="input-basic" placeholder="Inicio">
+                                <span class="separator">→</span>
+                                <input type="date" class="input-basic" placeholder="Fin">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="component-info">
+                        <h3>Date Range</h3>
+                        <p>Dos inputs para fecha inicio y fin</p>
+                        <span class="prompt-label">🤖 Prompt para IA:</span>
+                        <div class="prompt-box" onclick="copyPrompt(this)">Date range picker with two inputs, start and end date fields, arrow separator between them, clean modern design, synchronized calendar views, travel booking style, responsive layout, clear visual hierarchy</div>
+                    </div>
+                </div>
+
+                <!-- Time Picker -->
+                <div class="component-card">
+                    <div class="component-preview">
+                        <div class="input-wrapper">
+                            <label class="input-label">Hora de Reserva</label>
+                            <input type="time" class="input-basic time-input">
+                        </div>
+                    </div>
+                    <div class="component-info">
+                        <h3>Time Picker</h3>
+                        <p>Selector de hora nativo estilizado</p>
+                        <span class="prompt-label">🤖 Prompt para IA:</span>
+                        <div class="prompt-box" onclick="copyPrompt(this)">Modern time picker input, clock icon, 12 or 24 hour format, clean styled interface, native browser time selector with custom appearance, focus states, accessible time selection, booking system UI</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- File Upload Section -->
+        <section class="section">
+            <h2 class="section-title">File Uploaders</h2>
+            <p class="section-subtitle">Áreas para arrastrar y soltar archivos</p>
+            
+            <div class="components-grid">
+                <!-- Drag & Drop -->
+                <div class="component-card">
+                    <div class="component-preview">
+                        <div class="file-upload-zone">
+                            <div class="upload-icon">📁</div>
+                            <h4>Arrastra tus archivos aquí</h4>
+                            <p>o haz click para explorar</p>
+                            <input type="file" class="file-input" multiple>
+                        </div>
+                    </div>
+                    <div class="component-info">
+                        <h3>Drag & Drop Zone</h3>
+                        <p>Zona amplia para arrastrar múltiples archivos</p>
+                        <span class="prompt-label">🤖 Prompt para IA:</span>
+                        <div class="prompt-box" onclick="copyPrompt(this)">Drag and drop file upload zone, dashed border, large clickable area, folder icon, descriptive text, hover state with color change, modern cloud upload design, multiple file support, progress indicator ready</div>
+                    </div>
+                </div>
+
+                <!-- File Preview -->
+                <div class="component-card">
+                    <div class="component-preview">
+                        <div class="file-list">
+                            <div class="file-item">
+                                <span class="file-icon">📄</span>
+                                <div class="file-info">
+                                    <span class="file-name">documento.pdf</span>
+                                    <span class="file-size">2.4 MB</span>
+                                </div>
+                                <button class="remove-file">×</button>
+                            </div>
+                            <div class="file-item">
+                                <span class="file-icon">🖼️</span>
+                                <div class="file-info">
+                                    <span class="file-name">imagen.jpg</span>
+                                    <span class="file-size">1.8 MB</span>
+                                </div>
+                                <button class="remove-file">×</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="component-info">
+                        <h3>Lista de Archivos</h3>
+                        <p>Vista previa de archivos cargados con opción de eliminar</p>
+                        <span class="prompt-label">🤖 Prompt para IA:</span>
+                        <div class="prompt-box" onclick="copyPrompt(this)">File upload list with previews, file icons by type, filename and size display, remove button for each file, clean row layout, modern card design, progress bars for uploading files, organized file management UI</div>
+                    </div>
+                </div>
+
+                <!-- Image Upload -->
+                <div class="component-card">
+                    <div class="component-preview">
+                        <div class="image-upload">
+                            <div class="upload-placeholder">
+                                <span class="camera-icon">📷</span>
+                                <p>Subir foto de perfil</p>
+                                <small>JPG, PNG máx 5MB</small>
+                            </div>
+                            <input type="file" accept="image/*" class="file-input">
+                        </div>
+                    </div>
+                    <div class="component-info">
+                        <h3>Image Upload</h3>
+                        <p>Específico para imágenes con vista previa</p>
+                        <span class="prompt-label">🤖 Prompt para IA:</span>
+                        <div class="prompt-box" onclick="copyPrompt(this)">Image upload component with preview, camera icon, circular or square upload area, shows image thumbnail after upload, crop functionality hint, modern profile picture uploader, drag and drop support, file type restrictions displayed</div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
-    <script src="../../assets/js/utils.js"></script>
+
+    <footer class="main-footer">
+        <p>UI/UX Mega Collection © 2024 - Componentes de Formularios</p>
+    </footer>
+
     <script src="script.js"></script>
+    <script>
+        // Función global para copiar prompts
+        function copyPrompt(element) {
+            const text = element.textContent;
+            navigator.clipboard.writeText(text).then(() => {
+                const originalBg = element.style.background;
+                element.style.background = '#10b981';
+                element.textContent = '✅ ¡Copiado!';
+                setTimeout(() => {
+                    element.style.background = originalBg;
+                    element.textContent = text;
+                }, 2000);
+            });
+        }
+    </script>
 </body>
 </html>
