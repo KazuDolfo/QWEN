@@ -1,353 +1,415 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🎨 UI/UX Mega Collection - Índice Principal</title>
-    <link rel="stylesheet" href="assets/css/global.css">
-    <style>
-        .hero {
-            text-align: center;
-            padding: 60px 20px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border-radius: var(--radius-xl);
-            margin-bottom: 40px;
-            color: white;
-        }
-        
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 15px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-        }
-        
-        .hero p {
-            font-size: 1.2rem;
-            opacity: 0.95;
-            max-width: 800px;
-            margin: 0 auto 30px;
-        }
-        
-        .categories-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            margin-bottom: 40px;
-        }
-        
-        .category-card {
-            background: white;
-            border-radius: var(--radius-xl);
-            padding: 30px;
-            box-shadow: var(--shadow-xl);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            cursor: pointer;
-            text-decoration: none;
-            color: inherit;
-            display: block;
-        }
-        
-        .category-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-        }
-        
-        .category-icon {
-            font-size: 3.5rem;
-            margin-bottom: 15px;
-            display: block;
-        }
-        
-        .category-title {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: var(--gray-800);
-            margin-bottom: 10px;
-        }
-        
-        .category-description {
-            color: var(--gray-600);
-            line-height: 1.6;
-            margin-bottom: 15px;
-        }
-        
-        .category-count {
-            display: inline-block;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 5px 15px;
-            border-radius: var(--radius-full);
-            font-size: 0.85rem;
-            font-weight: 600;
-        }
-        
-        .features-section {
-            background: white;
-            border-radius: var(--radius-xl);
-            padding: 40px;
-            margin-bottom: 40px;
-            box-shadow: var(--shadow-xl);
-        }
-        
-        .features-section h2 {
-            text-align: center;
-            color: var(--gray-800);
-            margin-bottom: 30px;
-            font-size: 2rem;
-        }
-        
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
-        }
-        
-        .feature-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 15px;
-        }
-        
-        .feature-icon {
-            font-size: 2rem;
-            flex-shrink: 0;
-        }
-        
-        .feature-text h3 {
-            color: var(--gray-800);
-            margin-bottom: 8px;
-            font-size: 1.1rem;
-        }
-        
-        .feature-text p {
-            color: var(--gray-600);
-            font-size: 0.95rem;
-            line-height: 1.5;
-        }
-        
-        .ux-tips {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-            border-radius: var(--radius-xl);
-            padding: 40px;
-            color: white;
-            margin-bottom: 40px;
-        }
-        
-        .ux-tips h2 {
-            text-align: center;
-            margin-bottom: 25px;
-            font-size: 2rem;
-        }
-        
-        .tips-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-        }
-        
-        .tip-card {
-            background: rgba(255,255,255,0.15);
-            backdrop-filter: blur(10px);
-            padding: 20px;
-            border-radius: var(--radius-lg);
-            border: 1px solid rgba(255,255,255,0.2);
-        }
-        
-        .tip-card h3 {
-            font-size: 1.1rem;
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .tip-card p {
-            font-size: 0.95rem;
-            line-height: 1.6;
-            opacity: 0.95;
-        }
-        
-        footer {
-            text-align: center;
-            padding: 30px;
-            background: white;
-            border-radius: var(--radius-xl);
-            box-shadow: var(--shadow-xl);
-        }
-        
-        footer p {
-            color: var(--gray-600);
-            margin: 10px 0;
-        }
-        
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-            
-            .hero p {
-                font-size: 1rem;
-            }
-            
-            .categories-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UI/UX Mega Collection - Índice de Componentes</title>
+  <link rel="stylesheet" href="assets/css/global.css">
+  <style>
+    .hero {
+      text-align: center;
+      padding: var(--space-12) 0;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      border-radius: var(--radius-xl);
+      margin-bottom: var(--space-12);
+    }
+    
+    .hero h1 {
+      color: white;
+      font-size: 3rem;
+      margin-bottom: var(--space-4);
+    }
+    
+    .hero p {
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 1.25rem;
+      max-width: 800px;
+      margin: 0 auto var(--space-6);
+    }
+    
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: var(--space-4);
+      margin-top: var(--space-8);
+    }
+    
+    .stat-card {
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(10px);
+      padding: var(--space-4);
+      border-radius: var(--radius-lg);
+      text-align: center;
+    }
+    
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: 800;
+      display: block;
+    }
+    
+    .stat-label {
+      font-size: 0.875rem;
+      opacity: 0.9;
+    }
+    
+    .categories-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: var(--space-6);
+    }
+    
+    .category-card {
+      background: var(--bg-white);
+      border-radius: var(--radius-xl);
+      padding: var(--space-8);
+      box-shadow: var(--shadow-lg);
+      transition: all var(--transition-base);
+      border: 2px solid transparent;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+    
+    .category-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-2xl);
+      border-color: var(--primary);
+    }
+    
+    .category-icon {
+      font-size: 3rem;
+      margin-bottom: var(--space-4);
+      display: block;
+    }
+    
+    .category-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: var(--space-2);
+      color: var(--gray-900);
+    }
+    
+    .category-desc {
+      color: var(--gray-600);
+      margin-bottom: var(--space-4);
+      line-height: 1.6;
+    }
+    
+    .category-components {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-2);
+    }
+    
+    .component-tag {
+      background: var(--gray-100);
+      color: var(--gray-700);
+      padding: var(--space-1) var(--space-3);
+      border-radius: var(--radius-full);
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+    
+    .features-section {
+      background: var(--bg-white);
+      border-radius: var(--radius-xl);
+      padding: var(--space-12);
+      margin-top: var(--space-12);
+      box-shadow: var(--shadow-md);
+    }
+    
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: var(--space-8);
+      margin-top: var(--space-8);
+    }
+    
+    .feature-item {
+      text-align: center;
+    }
+    
+    .feature-icon {
+      font-size: 2.5rem;
+      margin-bottom: var(--space-4);
+    }
+    
+    .feature-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: var(--space-2);
+    }
+    
+    .feature-desc {
+      color: var(--gray-600);
+      font-size: 0.875rem;
+    }
+    
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+      
+      .hero p {
+        font-size: 1rem;
+      }
+      
+      .categories-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .features-section {
+        padding: var(--space-6);
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <header class="hero">
-            <h1>🎨 UI/UX Mega Collection</h1>
-            <p>Una colección masiva de componentes Frontend UI/UX organizados por categorías, todos 100% responsive y con prompts para IA generativa.</p>
-            <p><strong>+200 diseños únicos | 6 categorías principales | HTML • CSS • JS Puro</strong></p>
-        </header>
-        
-        <section class="features-section">
-            <h2>✨ Características del Proyecto</h2>
-            <div class="features-grid">
-                <div class="feature-item">
-                    <span class="feature-icon">📱</span>
-                    <div class="feature-text">
-                        <h3>100% Responsive</h3>
-                        <p>Todos los componentes se adaptan perfectamente a móvil, tablet y desktop.</p>
-                    </div>
-                </div>
-                <div class="feature-item">
-                    <span class="feature-icon">🤖</span>
-                    <div class="feature-text">
-                        <h3>Prompts para IA</h3>
-                        <p>Cada componente incluye su prompt en inglés para Midjourney, DALL-E, etc.</p>
-                    </div>
-                </div>
-                <div class="feature-item">
-                    <span class="feature-icon">📋</span>
-                    <div class="feature-text">
-                        <h3>Click para Copiar</h3>
-                        <p>Haz click en cualquier prompt para copiarlo automáticamente al portapapeles.</p>
-                    </div>
-                </div>
-                <div class="feature-item">
-                    <span class="feature-icon">⚡</span>
-                    <div class="feature-text">
-                        <h3>Sin Dependencias</h3>
-                        <p>HTML, CSS y JavaScript puro. Sin frameworks ni librerías externas.</p>
-                    </div>
-                </div>
-                <div class="feature-item">
-                    <span class="feature-icon">🎨</span>
-                    <div class="feature-text">
-                        <h3>Diseños Modernos</h3>
-                        <p>Gradient, Glassmorphism, Neumorphism, animaciones smooth y más.</p>
-                    </div>
-                </div>
-                <div class="feature-item">
-                    <span class="feature-icon">♿</span>
-                    <div class="feature-text">
-                        <h3>Accesibles</h3>
-                        <p>Semántica correcta, navegación por teclado y buenas prácticas WCAG.</p>
-                    </div>
-                </div>
-                <div class="feature-item">
-                    <span class="feature-icon">📁</span>
-                    <div class="feature-text">
-                        <h3>Estructura Escalable</h3>
-                        <p>Organizado por carpetas y categorías para fácil mantenimiento.</p>
-                    </div>
-                </div>
-                <div class="feature-item">
-                    <span class="feature-icon">🔄</span>
-                    <div class="feature-text">
-                        <h3>Estados Múltiples</h3>
-                        <p>Cada componente tiene estados: Default, Hover, Focus, Active, Disabled.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <h2 style="text-align: center; margin-bottom: 30px; color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.2);">📂 Explora las Categorías</h2>
-        
-        <div class="categories-grid">
-            <a href="components/01-navegacion/index.html" class="category-card">
-                <span class="category-icon">🧭</span>
-                <h3 class="category-title">1. Elementos de Navegación</h3>
-                <p class="category-description">Permiten al usuario moverse por el producto y entender dónde está. Incluye Navbars, Menús Hamburguesa, Breadcrumbs, Paginación, Tabs y Sidebars.</p>
-                <span class="category-count">+25 diseños</span>
-            </a>
-            
-            <a href="components/02-formularios/index.html" class="category-card">
-                <span class="category-icon">📝</span>
-                <h3 class="category-title">2. Controles de Entrada</h3>
-                <p class="category-description">Permiten al usuario ingresar datos o realizar acciones. Inputs, Textareas, Checkboxes, Radio Buttons, Switches, Dropdowns, Sliders y más.</p>
-                <span class="category-count">+35 diseños</span>
-            </a>
-            
-            <a href="components/03-info-datos/index.html" class="category-card">
-                <span class="category-icon">📊</span>
-                <h3 class="category-title">3. Información y Datos</h3>
-                <p class="category-description">Elementos que presentan contenido al usuario. Cards, Tablas, Listas, Acordeones, Badges, Tooltips y componentes de visualización.</p>
-                <span class="category-count">+30 diseños</span>
-            </a>
-            
-            <a href="components/04-feedback/index.html" class="category-card">
-                <span class="category-icon">💬</span>
-                <h3 class="category-title">4. Feedback y Notificaciones</h3>
-                <p class="category-description">Mantienen al usuario informado sobre el resultado de sus acciones. Modales, Toasts, Alertas, Spinners, Skeletons y Barras de Progreso.</p>
-                <span class="category-count">+25 diseños</span>
-            </a>
-            
-            <a href="components/05-acciones/index.html" class="category-card">
-                <span class="category-icon">⚡</span>
-                <h3 class="category-title">5. Acciones (CTA)</h3>
-                <p class="category-description">Elementos diseñados para incitar al usuario a interactuar. Botones Primarios, Secundarios, FAB, Icon Buttons y variaciones infinitas.</p>
-                <span class="category-count">+40 diseños</span>
-            </a>
-            
-            <a href="components/06-layout/index.html" class="category-card">
-                <span class="category-icon">📐</span>
-                <h3 class="category-title">6. Contenedores y Layout</h3>
-                <p class="category-description">La base estructural del diseño. Grids, Headers, Footers, Containers, Dividers y sistemas de organización de contenido.</p>
-                <span class="category-count">+25 diseños</span>
-            </a>
+  <div class="container section">
+    <!-- Hero Section -->
+    <div class="hero">
+      <h1>🎨 UI/UX Mega Collection</h1>
+      <p>Una colección masiva y escalable de componentes Frontend UI/UX organizados profesionalmente por categorías. Todos los diseños son 100% responsive e incluyen prompts para IA generativa.</p>
+      
+      <div class="stats-grid">
+        <div class="stat-card">
+          <span class="stat-number">6</span>
+          <span class="stat-label">Categorías</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">50+</span>
+          <span class="stat-label">Componentes</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">200+</span>
+          <span class="stat-label">Diseños</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">100%</span>
+          <span class="stat-label">Responsive</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Categories Grid -->
+    <h2 style="font-size: 2rem; margin-bottom: var(--space-8); text-align: center;">
+      📂 Categorías de Componentes
+    </h2>
+    
+    <div class="categories-grid">
+      <!-- Navegación -->
+      <a href="components/01-navegacion/index.html" class="category-card">
+        <span class="category-icon">🧭</span>
+        <h3 class="category-title">Elementos de Navegación</h3>
+        <p class="category-desc">
+          Permiten al usuario moverse por el producto y entender dónde está. 
+          Incluye barras de navegación, menús móviles, breadcrumbs y más.
+        </p>
+        <div class="category-components">
+          <span class="component-tag">Navbar</span>
+          <span class="component-tag">Hamburguesa</span>
+          <span class="component-tag">Breadcrumb</span>
+          <span class="component-tag">Paginación</span>
+          <span class="component-tag">Tabs</span>
+          <span class="component-tag">Sidebar</span>
+          <span class="component-tag">Links</span>
+        </div>
+      </a>
+
+      <!-- Formularios -->
+      <a href="#" class="category-card" onclick="showComingSoon(event)">
+        <span class="category-icon">📝</span>
+        <h3 class="category-title">Controles de Entrada</h3>
+        <p class="category-desc">
+          Permiten al usuario ingresar datos o realizar acciones. 
+          Inputs, checkboxes, selects, sliders y más controles de formulario.
+        </p>
+        <div class="category-components">
+          <span class="component-tag">Input Texto</span>
+          <span class="component-tag">Textarea</span>
+          <span class="component-tag">Checkbox</span>
+          <span class="component-tag">Radio</span>
+          <span class="component-tag">Switch</span>
+          <span class="component-tag">Dropdown</span>
+          <span class="component-tag">Slider</span>
+          <span class="component-tag">Date Picker</span>
+          <span class="component-tag">File Upload</span>
+        </div>
+      </a>
+
+      <!-- Información -->
+      <a href="#" class="category-card" onclick="showComingSoon(event)">
+        <span class="category-icon">📊</span>
+        <h3 class="category-title">Información y Datos</h3>
+        <p class="category-desc">
+          Elementos que presentan contenido al usuario de forma organizada. 
+          Tarjetas, tablas, listas, acordeones y etiquetas.
+        </p>
+        <div class="category-components">
+          <span class="component-tag">Cards</span>
+          <span class="component-tag">Tablas</span>
+          <span class="component-tag">Listas</span>
+          <span class="component-tag">Acordeón</span>
+          <span class="component-tag">Badges</span>
+          <span class="component-tag">Tooltips</span>
+        </div>
+      </a>
+
+      <!-- Feedback -->
+      <a href="#" class="category-card" onclick="showComingSoon(event)">
+        <span class="category-icon">💬</span>
+        <h3 class="category-title">Feedback y Notificaciones</h3>
+        <p class="category-desc">
+          Mantienen al usuario informado sobre el resultado de sus acciones. 
+          Modales, toasts, alertas y indicadores de carga.
+        </p>
+        <div class="category-components">
+          <span class="component-tag">Modales</span>
+          <span class="component-tag">Toasts</span>
+          <span class="component-tag">Alertas</span>
+          <span class="component-tag">Spinners</span>
+          <span class="component-tag">Progress Bars</span>
+          <span class="component-tag">Skeletons</span>
+        </div>
+      </a>
+
+      <!-- Acciones -->
+      <a href="#" class="category-card" onclick="showComingSoon(event)">
+        <span class="category-icon">⚡</span>
+        <h3 class="category-title">Acciones (CTA)</h3>
+        <p class="category-desc">
+          Elementos diseñados para incitar al usuario a interactuar. 
+          Botones primarios, secundarios, FAB y botones de icono.
+        </p>
+        <div class="category-components">
+          <span class="component-tag">Botón Primario</span>
+          <span class="component-tag">Botón Secundario</span>
+          <span class="component-tag">FAB</span>
+          <span class="component-tag">Icon Buttons</span>
+          <span class="component-tag">Gradient</span>
+          <span class="component-tag">Neumorphism</span>
+        </div>
+      </a>
+
+      <!-- Layout -->
+      <a href="#" class="category-card" onclick="showComingSoon(event)">
+        <span class="category-icon">📐</span>
+        <h3 class="category-title">Contenedores y Layout</h3>
+        <p class="category-desc">
+          La base estructural del diseño. Grids, headers, footers, 
+          contenedores y separadores para organizar el contenido.
+        </p>
+        <div class="category-components">
+          <span class="component-tag">Grid</span>
+          <span class="component-tag">Header</span>
+          <span class="component-tag">Footer</span>
+          <span class="component-tag">Container</span>
+          <span class="component-tag">Divider</span>
+          <span class="component-tag">Flexbox</span>
+        </div>
+      </a>
+    </div>
+
+    <!-- Features Section -->
+    <div class="features-section">
+      <h2 style="text-align: center; font-size: 2rem;">✨ Características Principales</h2>
+      
+      <div class="features-grid">
+        <div class="feature-item">
+          <div class="feature-icon">📱</div>
+          <h3 class="feature-title">100% Responsive</h3>
+          <p class="feature-desc">Todos los componentes se adaptan perfectamente a móvil, tablet y desktop</p>
         </div>
         
-        <section class="ux-tips">
-            <h2>💡 Tips Profesionales de UX</h2>
-            <div class="tips-grid">
-                <div class="tip-card">
-                    <h3>🎯 Jerarquía Visual</h3>
-                    <p>Usa colores y tamaños para indicar qué elemento es el más importante. El ojo debe saber dónde mirar primero.</p>
-                </div>
-                <div class="tip-card">
-                    <h3>🔘 Affordance</h3>
-                    <p>Un botón debe parecer un botón. Usa sombras, colores y formas que indiquen claramente la interactividad.</p>
-                </div>
-                <div class="tip-card">
-                    <h3>♿ Accesibilidad</h3>
-                    <p>Asegúrate de que todos los componentes sean usables con teclado y lectores de pantalla. Contraste adecuado es clave.</p>
-                </div>
-                <div class="tip-card">
-                    <h3>🎭 Estados</h3>
-                    <p>Cada componente debe tener estados definidos: Default, Hover, Focus, Active, Disabled y Error.</p>
-                </div>
-                <div class="tip-card">
-                    <h3>🎨 Consistencia</h3>
-                    <p>No se trata de cuántos componentes uses, sino de la consistencia. Mantén un lenguaje visual coherente.</p>
-                </div>
-                <div class="tip-card">
-                    <h3>⚡ Performance</h3>
-                    <p>Las animaciones deben ser suaves (60fps). Usa transform y opacity para mejores resultados.</p>
-                </div>
-            </div>
-        </section>
+        <div class="feature-item">
+          <div class="feature-icon">🤖</div>
+          <h3 class="feature-title">Prompts para IA</h3>
+          <p class="feature-desc">Cada componente incluye su prompt en inglés para Midjourney, DALL-E, etc.</p>
+        </div>
         
-        <footer>
-            <p><strong>🎨 UI/UX Mega Collection</strong></p>
-            <p>Creado con ❤️ usando HTML, CSS y JavaScript puro</p>
-            <p>© 2024 - Todos los componentes son libres de usar en tus proyectos</p>
-        </footer>
+        <div class="feature-item">
+          <div class="feature-icon">📋</div>
+          <h3 class="feature-title">Click para Copiar</h3>
+          <p class="feature-desc">Haz click en cualquier prompt para copiarlo automáticamente al portapapeles</p>
+        </div>
+        
+        <div class="feature-item">
+          <div class="feature-icon">⚡</div>
+          <h3 class="feature-title">Sin Dependencias</h3>
+          <p class="feature-desc">HTML, CSS y JavaScript puro. Sin librerías externas requeridas</p>
+        </div>
+        
+        <div class="feature-item">
+          <div class="feature-icon">🎨</div>
+          <h3 class="feature-title">Diseños Modernos</h3>
+          <p class="feature-desc">Gradient, Glassmorphism, Neumorphism y animaciones smooth</p>
+        </div>
+        
+        <div class="feature-item">
+          <div class="feature-icon">♿</div>
+          <h3 class="feature-title">Accesibles</h3>
+          <p class="feature-desc">Semántica correcta, navegación por teclado y WCAG compliant</p>
+        </div>
+        
+        <div class="feature-item">
+          <div class="feature-icon">🔄</div>
+          <h3 class="feature-title">Estados Múltiples</h3>
+          <p class="feature-desc">Default, Hover, Focus, Active, Disabled y Error states definidos</p>
+        </div>
+        
+        <div class="feature-item">
+          <div class="feature-icon">📁</div>
+          <h3 class="feature-title">Estructura Escalable</h3>
+          <p class="feature-desc">Organizado por carpetas según categoría para fácil mantenimiento</p>
+        </div>
+      </div>
     </div>
-    
-    <script src="assets/js/utils.js"></script>
+
+    <!-- Tips Section -->
+    <div style="background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); border-radius: var(--radius-xl); padding: var(--space-12); margin-top: var(--space-12);">
+      <h2 style="text-align: center; font-size: 2rem; margin-bottom: var(--space-8);">
+        💡 Tips Profesionales de UX
+      </h2>
+      
+      <div class="features-grid">
+        <div class="feature-item">
+          <div class="feature-icon">🎯</div>
+          <h3 class="feature-title">Consistencia</h3>
+          <p class="feature-desc">"No se trata de cuántos componentes uses, sino de la consistencia"</p>
+        </div>
+        
+        <div class="feature-item">
+          <div class="feature-icon">👁️</div>
+          <h3 class="feature-title">Jerarquía Visual</h3>
+          <p class="feature-desc">Usa colores y tamaños para indicar qué elemento es más importante</p>
+        </div>
+        
+        <div class="feature-item">
+          <div class="feature-icon">🔘</div>
+          <h3 class="feature-title">Affordance</h3>
+          <p class="feature-desc">Un botón debe parecer un botón (sombra, color, forma adecuados)</p>
+        </div>
+        
+        <div class="feature-item">
+          <div class="feature-icon">♿</div>
+          <h3 class="feature-title">Accesibilidad</h3>
+          <p class="feature-desc">Asegúrate que todos los componentes sean usables con teclado y lectores de pantalla</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast"></div>
+
+  <script src="assets/js/utils.js"></script>
+  <script>
+    function showComingSoon(event) {
+      event.preventDefault();
+      showToast('🚧 ¡Próximamente! Más componentes en camino');
+    }
+  </script>
 </body>
 </html>

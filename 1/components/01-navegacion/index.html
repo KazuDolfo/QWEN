@@ -1,519 +1,462 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UI/UX Mega Collection - Navegación</title>
-    <link rel="stylesheet" href="../../assets/css/global.css">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Componentes de Navegación UI/UX</title>
+  <link rel="stylesheet" href="../../assets/css/global.css">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .component-section {
+      margin-bottom: var(--space-12);
+    }
+    
+    .section-title {
+      font-size: 2rem;
+      margin-bottom: var(--space-6);
+      padding-bottom: var(--space-3);
+      border-bottom: 3px solid var(--primary);
+      display: inline-block;
+    }
+    
+    .component-grid {
+      display: grid;
+      gap: var(--space-6);
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    }
+    
+    .component-item {
+      background: var(--bg-white);
+      border-radius: var(--radius-lg);
+      padding: var(--space-6);
+      box-shadow: var(--shadow-md);
+    }
+    
+    .component-preview {
+      background: var(--gray-50);
+      border-radius: var(--radius-md);
+      padding: var(--space-6);
+      margin-bottom: var(--space-4);
+      min-height: 150px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: var(--space-4);
+    }
+    
+    .component-name {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--gray-800);
+      margin-bottom: var(--space-2);
+    }
+    
+    .component-desc {
+      color: var(--gray-600);
+      font-size: 0.875rem;
+      margin-bottom: var(--space-4);
+    }
+    
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-2);
+      color: var(--primary);
+      font-weight: 600;
+      margin-bottom: var(--space-6);
+      text-decoration: none;
+    }
+    
+    .back-link:hover {
+      gap: var(--space-3);
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <header class="page-header">
-            <h1>🧭 1. Elementos de Navegación</h1>
-            <p>Permiten al usuario moverse por el producto y entender dónde está.</p>
-        </header>
+  <div class="container section">
+    <a href="../../index.html" class="back-link">← Volver al Índice Principal</a>
+    
+    <h1 class="section-title">🧭 Componentes de Navegación</h1>
+    <p style="margin-bottom: var(--space-8); font-size: 1.125rem;">
+      Elementos que permiten al usuario moverse por el producto y entender dónde está. 
+      Incluye navbar, menús hamburguesa, breadcrumbs, paginación, tabs, sidebar y enlaces.
+    </p>
 
-        <!-- BARRA DE NAVEGACIÓN -->
-        <section class="component-section">
-            <h2>Navbar (Barra de Navegación)</h2>
-            
-            <div class="component-grid">
-                <!-- Navbar Clásica -->
-                <div class="component-card">
-                    <div class="preview">
-                        <nav class="navbar-classic">
-                            <div class="logo">Brand</div>
-                            <ul class="nav-links">
-                                <li><a href="#" class="active">Inicio</a></li>
-                                <li><a href="#">Productos</a></li>
-                                <li><a href="#">Servicios</a></li>
-                                <li><a href="#">Contacto</a></li>
-                            </ul>
-                            <button class="btn-primary">Login</button>
-                        </nav>
-                    </div>
-                    <div class="prompt-box" onclick="copyPrompt(this)">
-                        <code>Modern minimalist navigation bar with clean typography, subtle hover effects, sticky positioning, glassmorphism background blur effect, responsive design, Figma style, UI component, white background with navy blue accents</code>
-                    </div>
-                </div>
+    <!-- Navbar Section -->
+    <section class="component-section">
+      <h2 class="section-title">Barra de Navegación (Navbar)</h2>
+      
+      <div class="component-grid">
+        <!-- Navbar Light -->
+        <div class="component-item">
+          <div class="component-name">Navbar Claro</div>
+          <div class="component-desc">Barra de navegación clásica con fondo blanco y sombra suave</div>
+          <div class="component-preview" style="display: block; padding: 0; overflow: hidden;">
+            <nav class="navbar">
+              <div class="navbar-container">
+                <a href="#" class="navbar-brand">Brand</a>
+                <ul class="navbar-menu">
+                  <li><a href="#" class="navbar-link active">Inicio</a></li>
+                  <li><a href="#" class="navbar-link">Servicios</a></li>
+                  <li><a href="#" class="navbar-link">About</a></li>
+                  <li><a href="#" class="navbar-link">Contacto</a></li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+          <div class="prompt-box" onclick="copyPrompt(this)">
+            <div class="prompt-label">Prompt para IA:</div>
+            <code class="prompt-code">Modern clean navigation bar with white background, subtle shadow, logo on left, horizontal menu items with hover effects, active state indicator, responsive design, minimalist UI, professional web component</code>
+          </div>
+        </div>
 
-                <!-- Navbar con Gradiente -->
-                <div class="component-card">
-                    <div class="preview">
-                        <nav class="navbar-gradient">
-                            <div class="logo-gradient">✨ TechUI</div>
-                            <ul class="nav-links-gradient">
-                                <li><a href="#">Dashboard</a></li>
-                                <li><a href="#">Analytics</a></li>
-                                <li><a href="#">Reports</a></li>
-                                <li><a href="#">Settings</a></li>
-                            </ul>
-                            <div class="user-avatar">U</div>
-                        </nav>
-                    </div>
-                    <div class="prompt-box" onclick="copyPrompt(this)">
-                        <code>Gradient navigation bar with vibrant purple to pink colors, modern tech startup aesthetic, glowing effects, rounded corners, floating design, dark mode compatible, Dribbble trending, high-quality UI design</code>
-                    </div>
-                </div>
+        <!-- Navbar Dark -->
+        <div class="component-item">
+          <div class="component-name">Navbar Oscuro</div>
+          <div class="component-desc">Versión oscura elegante con alto contraste</div>
+          <div class="component-preview" style="display: block; padding: 0; overflow: hidden;">
+            <nav class="navbar navbar-dark">
+              <div class="navbar-container">
+                <a href="#" class="navbar-brand">DarkUI</a>
+                <ul class="navbar-menu">
+                  <li><a href="#" class="navbar-link active">Home</a></li>
+                  <li><a href="#" class="navbar-link">Features</a></li>
+                  <li><a href="#" class="navbar-link">Pricing</a></li>
+                  <li><a href="#" class="navbar-link">Contact</a></li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+          <div class="prompt-box" onclick="copyPrompt(this)">
+            <div class="prompt-label">Prompt para IA:</div>
+            <code class="prompt-code">Dark theme navigation bar, deep charcoal background, white text, glowing accent colors on hover, modern tech aesthetic, sleek design, high contrast accessibility, professional dashboard component</code>
+          </div>
+        </div>
 
-                <!-- Navbar oscura -->
-                <div class="component-card">
-                    <div class="preview">
-                        <nav class="navbar-dark">
-                            <div class="logo-dark">🌙 NightMode</div>
-                            <ul class="nav-links-dark">
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">Features</a></li>
-                                <li><a href="#">Pricing</a></li>
-                                <li><a href="#">About</a></li>
-                            </ul>
-                            <button class="btn-outline-light">Sign Up</button>
-                        </nav>
-                    </div>
-                    <div class="prompt-box" onclick="copyPrompt(this)">
-                        <code>Dark theme navigation bar, sleek black background with neon accent colors, cyberpunk aesthetic, glowing borders, modern sans-serif fonts, professional SaaS design, midnight blue and electric purple highlights</code>
-                    </div>
-                </div>
+        <!-- Navbar Glassmorphism -->
+        <div class="component-item">
+          <div class="component-name">Navbar Glassmorphism</div>
+          <div class="component-desc">Efecto de vidrio esmerilado moderno</div>
+          <div class="component-preview" style="display: block; padding: 0; overflow: hidden; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+            <nav class="navbar navbar-glass">
+              <div class="navbar-container">
+                <a href="#" class="navbar-brand">Glass</a>
+                <ul class="navbar-menu">
+                  <li><a href="#" class="navbar-link active">Start</a></li>
+                  <li><a href="#" class="navbar-link">Explore</a></li>
+                  <li><a href="#" class="navbar-link">Create</a></li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+          <div class="prompt-box" onclick="copyPrompt(this)">
+            <div class="prompt-label">Prompt para IA:</div>
+            <code class="prompt-code">Glassmorphism navigation bar, frosted glass effect with backdrop blur, semi-transparent white background, modern iOS style, elegant gradient background visible through glass, contemporary UI design, premium feel</code>
+          </div>
+        </div>
 
-                <!-- Navbar Transparente -->
-                <div class="component-card">
-                    <div class="preview navbar-transparent-wrapper">
-                        <nav class="navbar-transparent">
-                            <div class="logo-transparent">🏔️ Adventure</div>
-                            <ul class="nav-links-transparent">
-                                <li><a href="#">Destinations</a></li>
-                                <li><a href="#">Tours</a></li>
-                                <li><a href="#">Blog</a></li>
-                                <li><a href="#">Contact</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                    <div class="prompt-box" onclick="copyPrompt(this)">
-                        <code>Transparent navigation bar overlay on hero image, frosted glass effect, white text with subtle shadow, travel website aesthetic, cinematic background, elegant and minimal, parallax scrolling ready</code>
-                    </div>
+        <!-- Hamburger Menu -->
+        <div class="component-item">
+          <div class="component-name">Menú Hamburguesa</div>
+          <div class="component-desc">Menú móvil con animación de hamburguesa</div>
+          <div class="component-preview" style="display: block; padding: 0; overflow: hidden;">
+            <nav class="navbar" style="position: relative;">
+              <div class="navbar-container">
+                <a href="#" class="navbar-brand">Mobile</a>
+                <div class="hamburger" onclick="this.classList.toggle('active'); this.nextElementSibling.classList.toggle('active');">
+                  <span></span>
+                  <span></span>
+                  <span></span>
                 </div>
+              </div>
+              <div class="mobile-menu">
+                <a href="#" class="navbar-link" style="display: block;">Inicio</a>
+                <a href="#" class="navbar-link" style="display: block;">Servicios</a>
+                <a href="#" class="navbar-link" style="display: block;">About</a>
+                <a href="#" class="navbar-link" style="display: block;">Contacto</a>
+              </div>
+            </nav>
+          </div>
+          <div class="prompt-box" onclick="copyPrompt(this)">
+            <div class="prompt-label">Prompt para IA:</div>
+            <code class="prompt-code">Mobile hamburger menu icon, three line animation transforming to X, smooth transition, minimalist design, touch-friendly target size, modern mobile navigation pattern, accessible UI component</code>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Breadcrumb Section -->
+    <section class="component-section">
+      <h2 class="section-title">Breadcrumbs (Migas de Pan)</h2>
+      
+      <div class="component-grid">
+        <div class="component-item">
+          <div class="component-name">Breadcrumb Clásico</div>
+          <div class="component-desc">Indicador de jerarquía de navegación</div>
+          <div class="component-preview">
+            <nav class="breadcrumb">
+              <a href="#" class="breadcrumb-item">Inicio</a>
+              <span class="breadcrumb-separator">/</span>
+              <a href="#" class="breadcrumb-item">Productos</a>
+              <span class="breadcrumb-separator">/</span>
+              <a href="#" class="breadcrumb-item">Electrónica</a>
+              <span class="breadcrumb-separator">/</span>
+              <span class="breadcrumb-item active">Smartphones</span>
+            </nav>
+          </div>
+          <div class="prompt-box" onclick="copyPrompt(this)">
+            <div class="prompt-label">Prompt para IA:</div>
+            <code class="prompt-code">Breadcrumb navigation component, hierarchical path indicator, chevron separators, clickable links with hover states, current page highlighted, clean typography, UX best practice for deep navigation structures</code>
+          </div>
+        </div>
+
+        <div class="component-item">
+          <div class="component-name">Breadcrumb con Iconos</div>
+          <div class="component-desc">Versión enriquecida con iconos visuales</div>
+          <div class="component-preview">
+            <nav class="breadcrumb">
+              <a href="#" class="breadcrumb-item">🏠 Inicio</a>
+              <span class="breadcrumb-separator">›</span>
+              <a href="#" class="breadcrumb-item">📦 Productos</a>
+              <span class="breadcrumb-separator">›</span>
+              <span class="breadcrumb-item active">💻 Tech</span>
+            </nav>
+          </div>
+          <div class="prompt-box" onclick="copyPrompt(this)">
+            <div class="prompt-label">Prompt para IA:</div>
+            <code class="prompt-code">Breadcrumb with emoji icons, visual hierarchy indicators, modern arrow separators, friendly and approachable design, enhanced user orientation, colorful icon system, intuitive navigation aid</code>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pagination Section -->
+    <section class="component-section">
+      <h2 class="section-title">Paginación</h2>
+      
+      <div class="component-grid">
+        <div class="component-item">
+          <div class="component-name">Paginación Numérica</div>
+          <div class="component-desc">Navegación por páginas numeradas</div>
+          <div class="component-preview">
+            <ul class="pagination">
+              <li><a href="#" class="pagination-item disabled">←</a></li>
+              <li><a href="#" class="pagination-item active">1</a></li>
+              <li><a href="#" class="pagination-item">2</a></li>
+              <li><a href="#" class="pagination-item">3</a></li>
+              <li><a href="#" class="pagination-item">4</a></li>
+              <li><a href="#" class="pagination-item">5</a></li>
+              <li><a href="#" class="pagination-item">→</a></li>
+            </ul>
+          </div>
+          <div class="prompt-box" onclick="copyPrompt(this)">
+            <div class="prompt-label">Prompt para IA:</div>
+            <code class="prompt-code">Pagination component with numbered pages, previous/next arrows, active page highlight, hover animations, clean square buttons, responsive design that collapses on mobile, data table navigation pattern</code>
+          </div>
+        </div>
+
+        <div class="component-item">
+          <div class="component-name">Paginación Simple</div>
+          <div class="component-desc">Solo botones anterior/siguiente</div>
+          <div class="component-preview">
+            <ul class="pagination" style="gap: var(--space-4);">
+              <li><a href="#" class="pagination-item disabled">← Anterior</a></li>
+              <li><span style="color: var(--gray-500);">Página 1 de 10</span></li>
+              <li><a href="#" class="pagination-item">Siguiente →</a></li>
+            </ul>
+          </div>
+          <div class="prompt-box" onclick="copyPrompt(this)">
+            <div class="prompt-label">Prompt para IA:</div>
+            <code class="prompt-code">Simple pagination with prev/next buttons only, page counter in center, minimal design, text-based navigation, lightweight alternative to numbered pagination, infinite scroll alternative</code>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tabs Section -->
+    <section class="component-section">
+      <h2 class="section-title">Tabs (Pestañas)</h2>
+      
+      <div class="component-grid">
+        <div class="component-item" style="grid-column: span 2;">
+          <div class="component-name">Tabs Horizontales</div>
+          <div class="component-desc">Cambio de contenido sin recargar página</div>
+          <div class="component-preview" style="display: block;">
+            <div class="tabs">
+              <div class="tabs-header">
+                <button class="tab-button active" data-tab="tab1">Descripción</button>
+                <button class="tab-button" data-tab="tab2">Especificaciones</button>
+                <button class="tab-button" data-tab="tab3">Reseñas</button>
+              </div>
+              <div id="tab1" class="tab-content active">
+                <h4>Descripción del Producto</h4>
+                <p>Este es un producto increíble con características amazing que lo hacen único en su categoría.</p>
+              </div>
+              <div id="tab2" class="tab-content">
+                <h4>Especificaciones Técnicas</h4>
+                <p>Dimensiones: 10x20cm | Peso: 500g | Material: Aluminio premium</p>
+              </div>
+              <div id="tab3" class="tab-content">
+                <h4>Reseñas de Clientes</h4>
+                <p>⭐⭐⭐⭐⭐ "Excelente producto, superó mis expectativas" - Juan P.</p>
+              </div>
             </div>
-        </section>
+          </div>
+          <div class="prompt-box" onclick="copyPrompt(this)">
+            <div class="prompt-label">Prompt para IA:</div>
+            <code class="prompt-code">Horizontal tabs component, clean tab headers with active state indicator, smooth content transition animation, organized information architecture, product detail page pattern, modern SaaS dashboard style</code>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <!-- MENÚ HAMBURGUESA -->
-        <section class="component-section">
-            <h2>Menú Hamburguesa (Mobile)</h2>
-            
-            <div class="component-grid">
-                <!-- Hamburguesa Clásico -->
-                <div class="component-card">
-                    <div class="preview mobile-preview">
-                        <div class="mobile-header">
-                            <span class="mobile-logo">App</span>
-                            <button class="hamburger-btn" onclick="toggleMenu('menu1')">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </button>
-                        </div>
-                        <div id="menu1" class="mobile-menu">
-                            <a href="#">Inicio</a>
-                            <a href="#">Perfil</a>
-                            <a href="#">Configuración</a>
-                            <a href="#">Salir</a>
-                        </div>
-                    </div>
-                    <div class="prompt-box" onclick="copyPrompt(this)">
-                        <code>Mobile hamburger menu icon, three-line burger symbol, smooth animation when clicked, transforms into X close button, material design, clean lines, touch-friendly size 48x48px, iOS and Android compatible</code>
-                    </div>
-                </div>
+    <!-- Sidebar Section -->
+    <section class="component-section">
+      <h2 class="section-title">Sidebar (Barra Lateral)</h2>
+      
+      <div class="component-grid">
+        <div class="component-item">
+          <div class="component-name">Sidebar Dashboard</div>
+          <div class="component-desc">Menú lateral para aplicaciones web</div>
+          <div class="component-preview" style="display: block; height: 400px;">
+            <aside class="sidebar">
+              <div class="sidebar-section">
+                <div class="sidebar-title">Principal</div>
+                <ul class="sidebar-menu">
+                  <li class="sidebar-item">
+                    <a href="#" class="sidebar-link active">
+                      <span class="sidebar-icon">📊</span>
+                      Dashboard
+                    </a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">
+                      <span class="sidebar-icon">📁</span>
+                      Proyectos
+                    </a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">
+                      <span class="sidebar-icon">👥</span>
+                      Equipo
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="sidebar-section">
+                <div class="sidebar-title">Configuración</div>
+                <ul class="sidebar-menu">
+                  <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">
+                      <span class="sidebar-icon">⚙️</span>
+                      Ajustes
+                    </a>
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">
+                      <span class="sidebar-icon">❓</span>
+                      Ayuda
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </aside>
+          </div>
+          <div class="prompt-box" onclick="copyPrompt(this)">
+            <div class="prompt-label">Prompt para IA:</div>
+            <code class="prompt-code">Dashboard sidebar navigation, vertical menu with icon-text pairs, collapsible sections, active state highlighting, sticky positioning, modern admin panel design, SaaS application layout, professional enterprise UI</code>
+          </div>
+        </div>
 
-                <!-- Hamburguesa Animado -->
-                <div class="component-card">
-                    <div class="preview mobile-preview">
-                        <div class="mobile-header">
-                            <span class="mobile-logo">Menu</span>
-                            <button class="hamburger-animated" onclick="toggleMenu('menu2')">
-                                <span class="line line1"></span>
-                                <span class="line line2"></span>
-                                <span class="line line3"></span>
-                            </button>
-                        </div>
-                        <div id="menu2" class="mobile-menu-slide">
-                            <a href="#" class="slide-link">🏠 Home</a>
-                            <a href="#" class="slide-link">👤 Profile</a>
-                            <a href="#" class="slide-link">⚙️ Settings</a>
-                            <a href="#" class="slide-link">📊 Analytics</a>
-                            <a href="#" class="slide-link">🚪 Logout</a>
-                        </div>
-                    </div>
-                    <div class="prompt-box" onclick="copyPrompt(this)">
-                        <code>Animated hamburger menu with smooth transition, lines morphing into close X icon, slide-in mobile menu from right side, gradient background, modern micro-interactions, fluid animations, mobile-first design</code>
-                    </div>
-                </div>
+        <div class="component-item">
+          <div class="component-name">Sidebar Minimalista</div>
+          <div class="component-desc">Versión simplificada solo con iconos</div>
+          <div class="component-preview" style="display: block; height: 400px;">
+            <aside class="sidebar" style="width: 80px; padding: var(--space-4);">
+              <ul class="sidebar-menu">
+                <li class="sidebar-item">
+                  <a href="#" class="sidebar-link active" style="justify-content: center;">
+                    <span class="sidebar-icon" style="font-size: 1.5rem;">🏠</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#" class="sidebar-link" style="justify-content: center;">
+                    <span class="sidebar-icon" style="font-size: 1.5rem;">📊</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#" class="sidebar-link" style="justify-content: center;">
+                    <span class="sidebar-icon" style="font-size: 1.5rem;">💬</span>
+                  </a>
+                </li>
+                <li class="sidebar-item">
+                  <a href="#" class="sidebar-link" style="justify-content: center;">
+                    <span class="sidebar-icon" style="font-size: 1.5rem;">⚙️</span>
+                  </a>
+                </li>
+              </ul>
+            </aside>
+          </div>
+          <div class="prompt-box" onclick="copyPrompt(this)">
+            <div class="prompt-label">Prompt para IA:</div>
+            <code class="prompt-code">Minimalist icon-only sidebar, compact navigation rail, large touch targets, tooltip labels on hover, space-efficient design, modern mobile-first approach, collapsed state for desktop, expandable navigation pattern</code>
+          </div>
+        </div>
+      </div>
+    </section>
 
-                <!-- Menú Lateral Deslizante -->
-                <div class="component-card">
-                    <div class="preview mobile-preview">
-                        <button class="open-sidebar-btn" onclick="toggleSidebar()">☰ Abrir Sidebar</button>
-                        <div id="sidebar-overlay" class="sidebar-overlay" onclick="toggleSidebar()"></div>
-                        <div id="sidebar" class="sidebar-menu">
-                            <div class="sidebar-header">
-                                <h3>Menú</h3>
-                                <button class="close-btn" onclick="toggleSidebar()">✕</button>
-                            </div>
-                            <nav class="sidebar-nav">
-                                <a href="#" class="sidebar-item active">📱 Dashboard</a>
-                                <a href="#" class="sidebar-item">🛒 Productos</a>
-                                <a href="#" class="sidebar-item">📦 Pedidos</a>
-                                <a href="#" class="sidebar-item">💬 Mensajes</a>
-                                <a href="#" class="sidebar-item">⚙️ Configuración</a>
-                            </nav>
-                        </div>
-                    </div>
-                    <div class="prompt-box" onclick="copyPrompt(this)">
-                        <code>Sidebar navigation menu sliding from left, backdrop blur overlay, modern dashboard design, icon + text layout, active state highlighting, collapsible sections, professional admin panel UI, clean and organized</code>
-                    </div>
-                </div>
+    <!-- Text Links Section -->
+    <section class="component-section">
+      <h2 class="section-title">Enlaces de Texto (Links)</h2>
+      
+      <div class="component-grid">
+        <div class="component-item">
+          <div class="component-name">Link Inline</div>
+          <div class="component-desc">Enlaces dentro de párrafos de texto</div>
+          <div class="component-preview">
+            <p>
+              Este es un párrafo con un <a href="#" class="text-link">enlace embebido</a> 
+              que lleva a otra sección. También puedes tener 
+              <a href="#" class="text-link">múltiples enlaces</a> en el mismo texto.
+            </p>
+          </div>
+          <div class="prompt-box" onclick="copyPrompt(this)">
+            <div class="prompt-label">Prompt para IA:</div>
+            <code class="prompt-code">Inline text link within paragraph, subtle underline on hover, brand color accent, accessible focus states, natural reading flow, content-rich page linking pattern, SEO-friendly internal links</code>
+          </div>
+        </div>
+
+        <div class="component-item">
+          <div class="component-name">Link con Icono</div>
+          <div class="component-desc">Enlaces acompañados de iconos visuales</div>
+          <div class="component-preview">
+            <div class="link-group">
+              <a href="#" class="text-link-icon">
+                <span>📄</span> Documentación
+              </a>
+              <a href="#" class="text-link-icon">
+                <span>🔗</span> Recursos
+              </a>
+              <a href="#" class="text-link-icon">
+                <span>💬</span> Soporte
+              </a>
             </div>
-        </section>
+          </div>
+          <div class="prompt-box" onclick="copyPrompt(this)">
+            <div class="prompt-label">Prompt para IA:</div>
+            <code class="prompt-code">Icon-text link combination, horizontal link group, emoji or SVG icons, pill-shaped hover background, friendly and approachable design, resource page navigation, help center links pattern</code>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <!-- BREADCRUMBS -->
-        <section class="component-section">
-            <h2>Breadcrumbs (Migas de Pan)</h2>
-            
-            <div class="component-grid">
-                <!-- Breadcrumb Simple -->
-                <div class="component-card">
-                    <div class="preview">
-                        <nav class="breadcrumb-simple">
-                            <a href="#">Home</a>
-                            <span class="separator">/</span>
-                            <a href="#">Products</a>
-                            <span class="separator">/</span>
-                            <span class="current">Electronics</span>
-                        </nav>
-                    </div>
-                    <div class="prompt-box" onclick="copyPrompt(this)">
-                        <code>Simple breadcrumb navigation, clean typography, chevron or slash separators, current page highlighted in bold, minimal design, easy to read, accessible color contrast, standard web pattern</code>
-                    </div>
-                </div>
+  </div>
 
-                <!-- Breadcrumb con Iconos -->
-                <div class="component-card">
-                    <div class="preview">
-                        <nav class="breadcrumb-icons">
-                            <a href="#"><span class="icon">🏠</span> Home</a>
-                            <span class="arrow">›</span>
-                            <a href="#"><span class="icon">📦</span> Products</a>
-                            <span class="arrow">›</span>
-                            <a href="#"><span class="icon">💻</span> Electronics</a>
-                            <span class="arrow">›</span>
-                            <span class="current"><span class="icon">📱</span> Smartphones</span>
-                        </nav>
-                    </div>
-                    <div class="prompt-box" onclick="copyPrompt(this)">
-                        <code>Breadcrumb with icons for each level, colorful emoji or SVG icons, arrow separators, modern e-commerce style, visual hierarchy, engaging and friendly design, improved user orientation</code>
-                    </div>
-                </div>
+  <!-- Toast Notification -->
+  <div id="toast" class="toast">✅ ¡Prompt copiado al portapapeles!</div>
 
-                <!-- Breadcrumb Dropdown -->
-                <div class="component-card">
-                    <div class="preview">
-                        <nav class="breadcrumb-dropdown">
-                            <a href="#">Home</a>
-                            <span class="separator">/</span>
-                            <div class="dropdown-breadcrumb">
-                                <button class="dropbtn">Products ▾</button>
-                                <div class="dropdown-content">
-                                    <a href="#">Electronics</a>
-                                    <a href="#">Clothing</a>
-                                    <a href="#">Books</a>
-                                    <a href="#">Home & Garden</a>
-                                </div>
-                            </div>
-                            <span class="separator">/</span>
-                            <span class="current">Laptops</span>
-                        </nav>
-                    </div>
-                    <div class="prompt-box" onclick="copyPrompt(this)">
-                        <code>Breadcrumb with dropdown menus for parent categories, interactive navigation, space-saving design, hover states, modern UX pattern, efficient for deep site hierarchies, clean dropdown styling</code>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- PAGINACIÓN -->
-        <section class="component-section">
-            <h2>Paginación</h2>
-            
-            <div class="component-grid">
-                <!-- Paginación Básica -->
-                <div class="component-card">
-                    <div class="preview">
-                        <div class="pagination-basic">
-                            <a href="#" class="prev">← Anterior</a>
-                            <a href="#" class="page">1</a>
-                            <a href="#" class="page active">2</a>
-                            <a href="#" class="page">3</a>
-                            <a href="#" class="page">4</a>
-                            <a href="#" class="page">5</a>
-                            <a href="#" class="next">Siguiente →</a>
-                        </div>
-                    </div>
-                    <div class="prompt-box" onclick="copyPrompt(this)">
-                        <code>Basic pagination component, numbered pages with previous and next buttons, active page highlighted with primary color, hover effects, clean borders, responsive design that collapses on mobile, standard web pattern</code>
-                    </div>
-                </div>
-
-                <!-- Paginación con Puntos -->
-                <div class="component-card">
-                    <div class="preview">
-                        <div class="pagination-dots">
-                            <button class="dot-btn">❮</button>
-                            <span class="dot active"></span>
-                            <span class="dot"></span>
-                            <span class="dot"></span>
-                            <span class="dot"></span>
-                            <span class="dot"></span>
-                            <button class="dot-btn">❯</button>
-                        </div>
-                    </div>
-                    <div class="prompt-box" onclick="copyPrompt(this)">
-                        <code>Dot pagination indicator for carousels or sliders, small circular dots, active dot larger or different color, smooth transitions, minimal design, commonly used for image galleries, mobile-friendly touch targets</code>
-                    </div>
-                </div>
-
-                <!-- Paginación Infinita -->
-                <div class="component-card">
-                    <div class="preview">
-                        <div class="infinite-scroll">
-                            <div class="loading-spinner"></div>
-                            <span>Cargando más resultados...</span>
-                        </div>
-                    </div>
-                    <div class="prompt-box" onclick="copyPrompt(this)">
-                        <code>Infinite scroll loading indicator, animated spinner or skeleton loader, "Loading more results" text, smooth content appearance, modern social media style, seamless user experience, no pagination clicks needed</code>
-                    </div>
-                </div>
-
-                <!-- Paginación Avanzada -->
-                <div class="component-card">
-                    <div class="preview">
-                        <div class="pagination-advanced">
-                            <button class="btn-page">First</button>
-                            <button class="btn-page">Prev</button>
-                            <span class="page-info">Página <strong>3</strong> de <strong>50</strong></span>
-                            <select class="page-jump">
-                                <option>Ir a...</option>
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                            </select>
-                            <button class="btn-page">Next</button>
-                            <button class="btn-page">Last</button>
-                        </div>
-                    </div>
-                    <div class="prompt-box" onclick="copyPrompt(this)">
-                        <code>Advanced pagination with page numbers, total count display, jump to page dropdown, first/last buttons, data table footer style, information-rich design, enterprise software aesthetic, highly functional</code>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- TABS / PESTAÑAS -->
-        <section class="component-section">
-            <h2>Tabs (Pestañas)</h2>
-            
-            <div class="component-grid">
-                <!-- Tabs Horizontales -->
-                <div class="component-card full-width">
-                    <div class="preview">
-                        <div class="tabs-horizontal">
-                            <button class="tab-btn active" onclick="switchTab(event, 'tab1')">Descripción</button>
-                            <button class="tab-btn" onclick="switchTab(event, 'tab2')">Especificaciones</button>
-                            <button class="tab-btn" onclick="switchTab(event, 'tab3')">Reseñas</button>
-                            <button class="tab-btn" onclick="switchTab(event, 'tab4')">FAQ</button>
-                        </div>
-                        <div id="tab1" class="tab-content active">
-                            <p>Contenido de la descripción del producto. Información detallada sobre las características principales.</p>
-                        </div>
-                    </div>
-                    <div class="prompt-box" onclick="copyPrompt(this)">
-                        <code>Horizontal tabs navigation, underline indicator that slides to active tab, smooth transitions, clean separation of content sections, product page style, modern web design, accessible keyboard navigation</code>
-                    </div>
-                </div>
-
-                <!-- Tabs Verticales -->
-                <div class="component-card full-width">
-                    <div class="preview">
-                        <div class="tabs-vertical">
-                            <div class="vertical-tabs-list">
-                                <button class="v-tab-btn active" onclick="switchVTab(event, 'vtab1')">📊 Dashboard</button>
-                                <button class="v-tab-btn" onclick="switchVTab(event, 'vtab2')">👥 Usuarios</button>
-                                <button class="v-tab-btn" onclick="switchVTab(event, 'vtab3')">⚙️ Configuración</button>
-                                <button class="v-tab-btn" onclick="switchVTab(event, 'vtab4')">📈 Reportes</button>
-                            </div>
-                            <div id="vtab1" class="v-tab-content active">
-                                <h4>Panel de Control</h4>
-                                <p>Vista general de estadísticas y métricas importantes.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="prompt-box" onclick="copyPrompt(this)">
-                        <code>Vertical tabs sidebar navigation, icon + text labels, active state with background highlight, settings panel design, dashboard layout, efficient use of horizontal space, professional admin interface</code>
-                    </div>
-                </div>
-
-                <!-- Tabs con Iconos -->
-                <div class="component-card full-width">
-                    <div class="preview">
-                        <div class="tabs-icon">
-                            <button class="icon-tab-btn active">
-                                <span class="tab-icon">🏠</span>
-                                <span class="tab-text">Inicio</span>
-                            </button>
-                            <button class="icon-tab-btn">
-                                <span class="tab-icon">🔍</span>
-                                <span class="tab-text">Buscar</span>
-                            </button>
-                            <button class="icon-tab-btn">
-                                <span class="tab-icon">❤️</span>
-                                <span class="tab-text">Favoritos</span>
-                            </button>
-                            <button class="icon-tab-btn">
-                                <span class="tab-icon">👤</span>
-                                <span class="tab-text">Perfil</span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="prompt-box" onclick="copyPrompt(this)">
-                        <code>Icon-based tab navigation, colorful emoji or SVG icons, pill-shaped active state, mobile app bottom navigation style, friendly and approachable design, touch-optimized, iOS tab bar inspired</code>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- SIDEBAR -->
-        <section class="component-section">
-            <h2>Sidebar (Barra Lateral)</h2>
-            
-            <div class="component-grid">
-                <!-- Sidebar Clásico -->
-                <div class="component-card full-width">
-                    <div class="preview sidebar-preview">
-                        <aside class="sidebar-classic">
-                            <div class="sidebar-brand">
-                                <h3>🚀 Dashboard</h3>
-                            </div>
-                            <nav class="sidebar-menu">
-                                <div class="menu-section">
-                                    <span class="section-title">Principal</span>
-                                    <a href="#" class="sidebar-link active">
-                                        <span class="link-icon">📊</span>
-                                        <span>Dashboard</span>
-                                    </a>
-                                    <a href="#" class="sidebar-link">
-                                        <span class="link-icon">📦</span>
-                                        <span>Productos</span>
-                                    </a>
-                                    <a href="#" class="sidebar-link">
-                                        <span class="link-icon">🛒</span>
-                                        <span>Pedidos</span>
-                                    </a>
-                                </div>
-                                <div class="menu-section">
-                                    <span class="section-title">Análisis</span>
-                                    <a href="#" class="sidebar-link">
-                                        <span class="link-icon">📈</span>
-                                        <span>Reportes</span>
-                                    </a>
-                                    <a href="#" class="sidebar-link">
-                                        <span class="link-icon">👥</span>
-                                        <span>Clientes</span>
-                                    </a>
-                                </div>
-                            </nav>
-                        </aside>
-                    </div>
-                    <div class="prompt-box" onclick="copyPrompt(this)">
-                        <code>Classic admin sidebar navigation, grouped menu sections with headers, icon + text links, active state highlighting, collapsible subsections, professional dashboard design, dark or light theme options, enterprise UI</code>
-                    </div>
-                </div>
-
-                <!-- Sidebar Minimalista -->
-                <div class="component-card">
-                    <div class="preview sidebar-preview-small">
-                        <aside class="sidebar-minimal">
-                            <a href="#" class="mini-link" title="Dashboard">📊</a>
-                            <a href="#" class="mini-link active" title="Productos">📦</a>
-                            <a href="#" class="mini-link" title="Pedidos">🛒</a>
-                            <a href="#" class="mini-link" title="Reportes">📈</a>
-                            <a href="#" class="mini-link" title="Configuración">⚙️</a>
-                        </aside>
-                    </div>
-                    <div class="prompt-box" onclick="copyPrompt(this)">
-                        <code>Minimalist icon-only sidebar, collapsed rail navigation, tooltips on hover, maximum content space, modern SaaS design, clean and simple, expandable on hover, efficient screen real estate usage</code>
-                    </div>
-                </div>
-
-                <!-- Sidebar con Notificaciones -->
-                <div class="component-card">
-                    <div class="preview sidebar-preview-small">
-                        <aside class="sidebar-notifications">
-                            <a href="#" class="notif-link active">
-                                <span>🏠</span>
-                                <span class="badge">0</span>
-                            </a>
-                            <a href="#" class="notif-link">
-                                <span>💬</span>
-                                <span class="badge badge-red">5</span>
-                            </a>
-                            <a href="#" class="notif-link">
-                                <span>🔔</span>
-                                <span class="badge badge-orange">12</span>
-                            </a>
-                            <a href="#" class="notif-link">
-                                <span>❤️</span>
-                                <span class="badge badge-pink">3</span>
-                            </a>
-                        </aside>
-                    </div>
-                    <div class="prompt-box" onclick="copyPrompt(this)">
-                        <code>Sidebar with notification badges, red dot indicators for unread items, number counts, social media style, attention-grabbing colors, real-time updates feel, engaging user interface, mobile app inspired</code>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ENLACES DE TEXTO -->
-        <section class="component-section">
-            <h2>Enlaces de Texto (Links)</h2>
-            
-            <div class="component-grid">
-                <div class="component-card">
-                    <div class="preview links-preview">
-                        <h3>Estilos de Enlaces:</h3>
-                        <p>Este es un <a href="#" class="link-underline">enlace subrayado clásico</a> en un párrafo.</p>
-                        <p>Aquí tenemos un <a href="#" class="link-color">enlace con color destacado</a> que cambia al pasar el mouse.</p>
-                        <p>Un <a href="#" class="link-bold">enlace en negrita</a> para mayor énfasis visual.</p>
-                        <p><a href="#" class="link-arrow">Enlace con flecha →</a> que indica acción externa.</p>
-                        <p><a href="#" class="link-icon-left">🔗 Enlace con icono</a> a la izquierda.</p>
-                        <p><a href="#" class="link-no-underline">Enlace sin subrayado</a> para diseños minimalistas.</p>
-                        <p><a href="#" class="link-gradient">Enlace con gradiente</a> animado al hacer hover.</p>
-                    </div>
-                    <div class="prompt-box" onclick="copyPrompt(this)">
-                        <code>Text link variations, underline styles, hover animations, color transitions, inline links within paragraphs, accessible focus states, different weights and decorations, typography-focused design, content-rich pages</code>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <footer class="page-footer">
-            <p>✅ 6 subcategorías de navegación completadas | +25 diseños únicos</p>
-            <p class="tip">💡 Tip UX: La navegación debe ser predecible y consistente en todo el sitio.</p>
-        </footer>
-    </div>
-
-    <script src="../../assets/js/utils.js"></script>
-    <script src="script.js"></script>
+  <script src="../../assets/js/utils.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

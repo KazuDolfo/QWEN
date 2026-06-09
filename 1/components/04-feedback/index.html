@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback y Notificaciones - UI/UX Mega Collection</title>
+    <link rel="stylesheet" href="../../assets/css/global.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="component-container">
+        <header class="category-header">
+            <a href="../../index.html" class="back-btn">← Volver al Índice</a>
+            <h1>💬 Feedback y Notificaciones</h1>
+            <p>Mantén al usuario informado sobre el resultado de sus acciones</p>
+        </header>
+
+        <!-- SECCIÓN 1: MODALES -->
+        <section class="component-section">
+            <h2>🪟 Modales (Dialogs)</h2>
+            <div class="component-grid">
+                <div class="component-item">
+                    <div class="preview-area">
+                        <button class="btn-show-modal" data-modal="modal-confirm">Abrir Modal Confirmación</button>
+                    </div>
+                    <div class="prompt-box" onclick="copyPrompt(this)">
+                        <code>Confirmation modal dialog with warning icon, clear title asking for confirmation, descriptive text, two buttons (Cancel gray, Confirm red). Overlay with backdrop blur, rounded corners.</code>
+                        <span class="copy-hint">Click para copiar prompt</span>
+                    </div>
+                </div>
+                <div class="component-item">
+                    <div class="preview-area">
+                        <button class="btn-show-modal" data-modal="modal-login">Abrir Modal Login</button>
+                    </div>
+                    <div class="prompt-box" onclick="copyPrompt(this)">
+                        <code>Login modal with email/password inputs, remember me checkbox, forgot password link, sign in button, social login options. Clean form design, floating labels.</code>
+                        <span class="copy-hint">Click para copiar prompt</span>
+                    </div>
+                </div>
+                <div class="component-item">
+                    <div class="preview-area">
+                        <button class="btn-show-modal" data-modal="modal-success">Abrir Modal Success</button>
+                    </div>
+                    <div class="prompt-box" onclick="copyPrompt(this)">
+                        <code>Success modal with green checkmark animation, congratulatory message, description, continue button. Positive feedback design, celebratory feel.</code>
+                        <span class="copy-hint">Click para copiar prompt</span>
+                    </div>
+                </div>
+                <div class="component-item">
+                    <div class="preview-area">
+                        <button class="btn-show-modal" data-modal="modal-warning">Abrir Modal Warning</button>
+                    </div>
+                    <div class="prompt-box" onclick="copyPrompt(this)">
+                        <code>Warning modal with yellow warning icon, attention title, detailed warning message, action buttons. Alert dialog design, caution indicator.</code>
+                        <span class="copy-hint">Click para copiar prompt</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 2: TOASTS -->
+        <section class="component-section">
+            <h2>🍞 Toasts (Snackbars)</h2>
+            <div class="component-grid">
+                <div class="component-item full-width">
+                    <div class="preview-area toast-controls">
+                        <button class="btn-toast" data-type="success">✓ Toast Success</button>
+                        <button class="btn-toast" data-type="error">✕ Toast Error</button>
+                        <button class="btn-toast" data-type="warning">⚠ Toast Warning</button>
+                        <button class="btn-toast" data-type="info">ℹ Toast Info</button>
+                    </div>
+                    <div class="prompt-box" onclick="copyPrompt(this)">
+                        <code>Toast notifications with success (green), error (red), warning (yellow), info (blue) variants. Slide-in animation, auto-dismiss after 3s, dismissible. Snackbar micro-feedback UI.</code>
+                        <span class="copy-hint">Click para copiar prompt</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 3: ALERTAS -->
+        <section class="component-section">
+            <h2>🔔 Alertas (Alerts/Banners)</h2>
+            <div class="component-grid full-width">
+                <div class="component-item full-width">
+                    <div class="preview-area">
+                        <div class="alerts-container">
+                            <div class="alert alert-success">
+                                <span class="alert-icon">✓</span>
+                                <div class="alert-content"><strong>¡Éxito!</strong><p>Tus cambios han sido guardados.</p></div>
+                                <button class="alert-close">×</button>
+                            </div>
+                            <div class="alert alert-error">
+                                <span class="alert-icon">✕</span>
+                                <div class="alert-content"><strong>Error</strong><p>No se pudo conectar.</p></div>
+                                <button class="alert-close">×</button>
+                            </div>
+                            <div class="alert alert-warning">
+                                <span class="alert-icon">⚠</span>
+                                <div class="alert-content"><strong>Advertencia</strong><p>Tu sesión expira pronto.</p></div>
+                                <button class="alert-close">×</button>
+                            </div>
+                            <div class="alert alert-info">
+                                <span class="alert-icon">ℹ</span>
+                                <div class="alert-content"><strong>Info</strong><p>Nueva funcionalidad disponible.</p></div>
+                                <button class="alert-close">×</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="prompt-box" onclick="copyPrompt(this)">
+                        <code>Alert banners with success green, error red, warning yellow, info blue. Icon, bold title, text, dismiss button. Inline contextual notifications.</code>
+                        <span class="copy-hint">Click para copiar prompt</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 4: SPINNERS -->
+        <section class="component-section">
+            <h2>⏳ Loading Indicators</h2>
+            <div class="component-grid">
+                <div class="component-item">
+                    <div class="preview-area"><div class="spinner-simple"></div></div>
+                    <div class="prompt-box" onclick="copyPrompt(this)">
+                        <code>Circular spinner loader with rotating gradient animation. Loading indicator, processing state UI.</code>
+                        <span class="copy-hint">Click para copiar prompt</span>
+                    </div>
+                </div>
+                <div class="component-item">
+                    <div class="preview-area">
+                        <div class="spinner-dots"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>
+                    </div>
+                    <div class="prompt-box" onclick="copyPrompt(this)">
+                        <code>Bouncing dots loader, three circles wave animation. Typing indicator style, minimal progress UI.</code>
+                        <span class="copy-hint">Click para copiar prompt</span>
+                    </div>
+                </div>
+                <div class="component-item">
+                    <div class="preview-area"><div class="skeleton-card"><div class="skeleton skeleton-image"></div><div class="skeleton skeleton-title"></div><div class="skeleton skeleton-text"></div></div></div>
+                    <div class="prompt-box" onclick="copyPrompt(this)">
+                        <code>Skeleton loading card with shimmer animation, image/title/text placeholders. Content loading state, progressive UI.</code>
+                        <span class="copy-hint">Click para copiar prompt</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 5: PROGRESS BARS -->
+        <section class="component-section">
+            <h2>📊 Barras de Progreso</h2>
+            <div class="component-grid full-width">
+                <div class="component-item full-width">
+                    <div class="preview-area">
+                        <div class="progress-container">
+                            <div class="progress-label"><span>Simple</span><span>75%</span></div>
+                            <div class="progress-bar"><div class="progress-fill" style="width:75%"></div></div>
+                        </div>
+                        <div class="progress-container">
+                            <div class="progress-label"><span>Gradiente</span><span>60%</span></div>
+                            <div class="progress-bar gradient"><div class="progress-fill" style="width:60%"></div></div>
+                        </div>
+                        <div class="progress-container">
+                            <div class="progress-label"><span>Circular</span><span>80%</span></div>
+                            <div class="progress-circular">
+                                <svg viewBox="0 0 100 100"><circle class="progress-ring-bg" cx="50" cy="50" r="45"/><circle class="progress-ring" cx="50" cy="50" r="45" stroke-dasharray="283" stroke-dashoffset="57"/></svg>
+                                <span class="progress-text">80%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="prompt-box" onclick="copyPrompt(this)">
+                        <code>Progress bars: simple solid, gradient filled, circular ring with percentage. Loading completion tracking indicators.</code>
+                        <span class="copy-hint">Click para copiar prompt</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MODALES -->
+        <div id="modal-confirm" class="modal-overlay"><div class="modal"><div class="modal-icon">⚠️</div><h3>¿Estás seguro?</h3><p>Esta acción no se puede deshacer.</p><div class="modal-actions"><button class="btn-cancel">Cancelar</button><button class="btn-confirm">Eliminar</button></div></div></div>
+        <div id="modal-login" class="modal-overlay"><div class="modal modal-login"><button class="modal-close">×</button><h3>Iniciar Sesión</h3><input type="email" placeholder="Email"><input type="password" placeholder="Contraseña"><button class="btn-primary">Ingresar</button></div></div>
+        <div id="modal-success" class="modal-overlay"><div class="modal"><div class="checkmark">✓</div><h3>¡Completado!</h3><p>Operación exitosa.</p><button class="btn-primary">Continuar</button></div></div>
+        <div id="modal-warning" class="modal-overlay"><div class="modal"><div class="modal-icon danger">⚠️</div><h3>¡Atención!</h3><p>Lee las consecuencias antes de proceder.</p><div class="modal-actions"><button class="btn-cancel">Cancelar</button><button class="btn-warning">Proceder</button></div></div></div>
+    </div>
+    <script src="../../assets/js/utils.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
