@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI/UX Component Collection</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .hero {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            margin-bottom: 3rem;
+            border-radius: 0 0 30px 30px;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .category-card {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .category-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .category-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+        
+        .category-card h3 {
+            color: #2C3E50;
+            margin-bottom: 0.5rem;
+        }
+        
+        .category-card p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+        
+        .component-count {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin-top: 1rem;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            padding: 3rem 2rem;
+            max-width: 1200px;
+            margin: 3rem auto;
+        }
+        
+        .feature-item {
+            text-align: center;
+            padding: 1.5rem;
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: #2C3E50;
+            color: white;
+            margin-top: 4rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <h1>🎨 Colección UI/UX</h1>
+        <p>Más de 50 componentes de frontend modernos, responsivos y listos para usar con sus prompts para IA generativa</p>
+    </div>
+
+    <main class="categories-grid">
+        <a href="botones/botones.html" class="category-card">
+            <div class="category-icon">🔘</div>
+            <h3>Botones</h3>
+            <p>Gradiente, Neumorfismo, Glassmorphism, 3D, Loading y más</p>
+            <span class="component-count">8 diseños</span>
+        </a>
+
+        <a href="cards/cards.html" class="category-card">
+            <div class="category-icon">📦</div>
+            <h3>Cards</h3>
+            <p>Producto, Perfil, Blog, Precios, Testimonios, Estadísticas</p>
+            <span class="component-count">6 diseños</span>
+        </a>
+
+        <a href="ventanas/ventanas.html" class="category-card">
+            <div class="category-icon">🪟</div>
+            <h3>Ventanas & Modales</h3>
+            <p>Confirmación, Login, Notificaciones, Alertas, Galería, Video</p>
+            <span class="component-count">6 diseños</span>
+        </a>
+
+        <a href="sombras-color/sombras-color.html" class="category-card">
+            <div class="category-icon">🎨</div>
+            <h3>Sombras & Color</h3>
+            <p>Efectos de sombra y paletas de colores profesionales</p>
+            <span class="component-count">8 diseños</span>
+        </a>
+
+        <a href="perfiles/perfiles.html" class="category-card">
+            <div class="category-icon">👤</div>
+            <h3>Perfiles</h3>
+            <p>Minimalista, Banner, Stats, Compacto, Equipo, Avatar Group</p>
+            <span class="component-count">6 diseños</span>
+        </a>
+
+        <a href="menus/menus.html" class="category-card">
+            <div class="category-icon">🧭</div>
+            <h3>Menús</h3>
+            <p>Horizontal, Sidebar, Móvil, Dropdown, Mega Menú, Tabs</p>
+            <span class="component-count">6 diseños</span>
+        </a>
+
+        <a href="imagenes/imagenes.html" class="category-card">
+            <div class="category-icon">🖼️</div>
+            <h3>Imágenes & Galerías</h3>
+            <p>Overlay, Zoom, Carrusel, Lightbox, Lazy Loading</p>
+            <span class="component-count">8 diseños</span>
+        </a>
+    </main>
+
+    <section class="features">
+        <div class="feature-item">
+            <div class="feature-icon">📱</div>
+            <h3>100% Responsive</h3>
+            <p>Todos los componentes se adaptan a cualquier dispositivo</p>
+        </div>
+        <div class="feature-item">
+            <div class="feature-icon">⚡</div>
+            <h3>Sin Dependencias</h3>
+            <p>HTML, CSS y JavaScript puro. Sin frameworks necesarios</p>
+        </div>
+        <div class="feature-item">
+            <div class="feature-icon">🤖</div>
+            <h3>Prompts Incluidos</h3>
+            <p>Cada componente incluye su prompt para IA generativa</p>
+        </div>
+        <div class="feature-item">
+            <div class="feature-icon">🎯</div>
+            <h3>Copy & Paste</h3>
+            <p>Haz click en los prompts para copiarlos al portapapeles</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 UI/UX Component Collection - Diseños modernos para tus proyectos web</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

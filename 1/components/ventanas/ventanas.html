@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colección de Ventanas y Modales UI/UX</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .component-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+        }
+        
+        .component-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .prompt-box {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 1rem;
+            margin-top: 1rem;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .prompt-box:hover {
+            background: #e9ecef;
+            transform: translateY(-2px);
+        }
+        
+        .preview-area {
+            min-height: 250px;
+            margin-bottom: 1rem;
+            position: relative;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 8px;
+            padding: 1rem;
+        }
+        
+        .modal-preview {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            max-width: 280px;
+            margin: 0 auto;
+        }
+        
+        .btn-open {
+            margin-top: 1rem;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">UI/UX Collection</div>
+        <ul class="nav-links">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="botones.html">Botones</a></li>
+            <li><a href="cards.html">Cards</a></li>
+            <li><a href="ventanas.html" class="active">Ventanas</a></li>
+            <li><a href="sombras-color.html">Sombras & Color</a></li>
+            <li><a href="perfiles.html">Perfiles</a></li>
+            <li><a href="menus.html">Menús</a></li>
+            <li><a href="imagenes.html">Imágenes</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <h1>🪟 Colección de Ventanas y Modales</h1>
+        <p class="subtitle">Diseños de modales, popups y ventanas emergentes responsivas con sus prompts para IA</p>
+
+        <div class="component-container">
+            <!-- Modal Básico -->
+            <div class="component-card">
+                <div class="preview-area">
+                    <div class="modal-preview">
+                        <h3>Confirmación</h3>
+                        <p>¿Estás seguro de realizar esta acción?</p>
+                        <div style="display: flex; gap: 0.5rem; margin-top: 1rem;">
+                            <button class="btn-outline" style="flex: 1;">Cancelar</button>
+                            <button class="btn-gradient" style="flex: 1;">Aceptar</button>
+                        </div>
+                    </div>
+                </div>
+                <h3>Modal de Confirmación</h3>
+                <button class="btn-outline btn-open" onclick="openModal('modal1')">Ver Demo</button>
+                <div class="prompt-box" onclick="copyPrompt(this)">
+                    <strong>Prompt:</strong> "Design a confirmation modal dialog with clear title, descriptive message, two action buttons (cancel and confirm), backdrop overlay, smooth entrance animation, and accessible focus management"
+                </div>
+            </div>
+
+            <!-- Modal Formulario -->
+            <div class="component-card">
+                <div class="preview-area">
+                    <div class="modal-preview">
+                        <h3>Iniciar Sesión</h3>
+                        <input type="email" placeholder="Email" style="width: 100%; padding: 0.5rem; margin: 0.5rem 0; border: 1px solid #ddd; border-radius: 6px;">
+                        <input type="password" placeholder="Contraseña" style="width: 100%; padding: 0.5rem; margin: 0.5rem 0; border: 1px solid #ddd; border-radius: 6px;">
+                        <button class="btn-gradient" style="width: 100%;">Entrar</button>
+                    </div>
+                </div>
+                <h3>Modal de Login</h3>
+                <button class="btn-outline btn-open" onclick="openModal('modal2')">Ver Demo</button>
+                <div class="prompt-box" onclick="copyPrompt(this)">
+                    <strong>Prompt:</strong> "Create a login modal with email and password fields, remember me checkbox, forgot password link, social login options, form validation states, and secure authentication design"
+                </div>
+            </div>
+
+            <!-- Modal Notificación -->
+            <div class="component-card">
+                <div class="preview-area">
+                    <div class="modal-preview" style="text-align: center;">
+                        <div style="font-size: 3rem;">✓</div>
+                        <h3>¡Éxito!</h3>
+                        <p>Tu operación se completó correctamente</p>
+                        <button class="btn-gradient">Continuar</button>
+                    </div>
+                </div>
+                <h3>Modal de Éxito</h3>
+                <button class="btn-outline btn-open" onclick="openModal('modal3')">Ver Demo</button>
+                <div class="prompt-box" onclick="copyPrompt(this)">
+                    <strong>Prompt:</strong> "Design a success notification modal with large checkmark icon, positive messaging, encouraging tone, single action button, celebratory animation, and auto-dismiss option"
+                </div>
+            </div>
+
+            <!-- Modal Alerta -->
+            <div class="component-card">
+                <div class="preview-area">
+                    <div class="modal-preview">
+                        <div style="color: #e74c3c; font-size: 2rem;">⚠️</div>
+                        <h3 style="color: #e74c3c;">Advertencia</h3>
+                        <p>Esta acción no se puede deshacer</p>
+                        <button class="btn-outline" style="width: 100%; border-color: #e74c3c; color: #e74c3c;">Entendido</button>
+                    </div>
+                </div>
+                <h3>Modal de Advertencia</h3>
+                <button class="btn-outline btn-open" onclick="openModal('modal4')">Ver Demo</button>
+                <div class="prompt-box" onclick="copyPrompt(this)">
+                    <strong>Prompt:</strong> "Create a warning alert modal with attention-grabbing icon, clear warning message, red/orange color scheme, acknowledgment button, urgent but not alarming design"
+                </div>
+            </div>
+
+            <!-- Modal Galería -->
+            <div class="component-card">
+                <div class="preview-area">
+                    <div class="modal-preview" style="max-width: 320px;">
+                        <div style="background: #eee; height: 150px; border-radius: 8px; margin-bottom: 1rem;"></div>
+                        <h3>Galería Lightbox</h3>
+                        <p>Imagen 1 de 5</p>
+                        <div style="display: flex; justify-content: space-between;">
+                            <button class="btn-outline">← Ant</button>
+                            <button class="btn-outline">Sig →</button>
+                        </div>
+                    </div>
+                </div>
+                <h3>Modal Galería</h3>
+                <button class="btn-outline btn-open" onclick="openModal('modal5')">Ver Demo</button>
+                <div class="prompt-box" onclick="copyPrompt(this)">
+                    <strong>Prompt:</strong> "Design an image gallery lightbox modal with large image display, navigation arrows, image counter, thumbnail strip, zoom functionality, keyboard navigation, and smooth transitions"
+                </div>
+            </div>
+
+            <!-- Modal Video -->
+            <div class="component-card">
+                <div class="preview-area">
+                    <div class="modal-preview" style="max-width: 320px;">
+                        <div style="background: #000; height: 150px; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem;">▶</div>
+                        <h3 style="margin-top: 1rem;">Video Tutorial</h3>
+                        <button class="btn-outline" style="width: 100%;">Cerrar</button>
+                    </div>
+                </div>
+                <h3>Modal de Video</h3>
+                <button class="btn-outline btn-open" onclick="openModal('modal6')">Ver Demo</button>
+                <div class="prompt-box" onclick="copyPrompt(this)">
+                    <strong>Prompt:</strong> "Create a video player modal with embedded video container, play button overlay, responsive aspect ratio, close button, autoplay on open, pause on close, and theater mode option"
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Backdrop y Modales Demo -->
+    <div id="modalBackdrop" class="modal-backdrop" onclick="closeModal()"></div>
+
+    <script src="../script.js"></script>
+    <script>
+        const backdrop = document.getElementById('modalBackdrop');
+        
+        function openModal(type) {
+            backdrop.style.display = 'block';
+            setTimeout(() => backdrop.classList.add('active'), 10);
+        }
+        
+        function closeModal() {
+            backdrop.classList.remove('active');
+            setTimeout(() => backdrop.style.display = 'none', 300);
+        }
+    </script>
+</body>
+</html>
