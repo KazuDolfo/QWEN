@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menús de Navegación UI/UX</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .component-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+        }
+        
+        .component-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .prompt-box {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 1rem;
+            margin-top: 1rem;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .prompt-box:hover {
+            background: #e9ecef;
+            transform: translateY(-2px);
+        }
+        
+        .preview-area {
+            min-height: 200px;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        /* Menu Styles */
+        .nav-horizontal {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .nav-links-horizontal {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .nav-links-horizontal a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.9;
+            transition: opacity 0.3s;
+        }
+        
+        .nav-links-horizontal a:hover {
+            opacity: 1;
+        }
+        
+        .nav-sidebar {
+            width: 200px;
+            background: #2C3E50;
+            color: white;
+            padding: 1.5rem;
+            height: 250px;
+        }
+        
+        .nav-sidebar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .nav-sidebar li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .nav-sidebar a {
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .nav-mobile {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 1rem;
+        }
+        
+        .mobile-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .hamburger {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            cursor: pointer;
+        }
+        
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: #333;
+            border-radius: 2px;
+        }
+        
+        .dropdown-menu {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background: white;
+            min-width: 160px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            z-index: 1;
+        }
+        
+        .dropdown-content a {
+            color: #333;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            border-radius: 8px;
+        }
+        
+        .dropdown-content a:hover {
+            background: #f1f1f1;
+        }
+        
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        
+        .mega-menu {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 1.5rem;
+        }
+        
+        .mega-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+        
+        .mega-column h4 {
+            color: #667eea;
+            margin-bottom: 0.75rem;
+        }
+        
+        .mega-column ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .mega-column li {
+            padding: 0.5rem 0;
+        }
+        
+        .mega-column a {
+            color: #666;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        
+        .tab-menu {
+            display: flex;
+            gap: 0.5rem;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 0;
+        }
+        
+        .tab-item {
+            padding: 0.75rem 1.5rem;
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+            margin-bottom: -2px;
+            transition: all 0.3s;
+        }
+        
+        .tab-item.active {
+            color: #667eea;
+            border-bottom-color: #667eea;
+        }
+        
+        .tab-item:hover:not(.active) {
+            background: #f8f9fa;
+            border-radius: 8px 8px 0 0;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">UI/UX Collection</div>
+        <ul class="nav-links">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="botones.html">Botones</a></li>
+            <li><a href="cards.html">Cards</a></li>
+            <li><a href="ventanas.html">Ventanas</a></li>
+            <li><a href="sombras-color.html">Sombras & Color</a></li>
+            <li><a href="perfiles.html">Perfiles</a></li>
+            <li><a href="menus.html" class="active">Menús</a></li>
+            <li><a href="imagenes.html">Imágenes</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <h1>🧭 Colección de Menús</h1>
+        <p class="subtitle">Diseños de navegación y menús responsivos con sus prompts para IA</p>
+
+        <div class="component-container">
+            <!-- Menú Horizontal -->
+            <div class="component-card">
+                <div class="preview-area">
+                    <div class="nav-horizontal">
+                        <div class="nav-brand">Logo</div>
+                        <ul class="nav-links-horizontal">
+                            <li><a href="#">Inicio</a></li>
+                            <li><a href="#">Servicios</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Contacto</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <h3>Menú Horizontal</h3>
+                <div class="prompt-box" onclick="copyPrompt(this)">
+                    <strong>Prompt:</strong> "Design a horizontal navigation bar with logo on left, menu items evenly spaced, hover effects on links, responsive hamburger menu for mobile, clean modern style, sticky header option"
+                </div>
+            </div>
+
+            <!-- Menú Sidebar -->
+            <div class="component-card">
+                <div class="preview-area">
+                    <div class="nav-sidebar">
+                        <h3 style="margin-bottom: 1.5rem;">Dashboard</h3>
+                        <ul>
+                            <li><a href="#">📊 Inicio</a></li>
+                            <li><a href="#">👤 Perfil</a></li>
+                            <li><a href="#">⚙️ Configuración</a></li>
+                            <li><a href="#">📧 Mensajes</a></li>
+                            <li><a href="#">🚪 Salir</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <h3>Menú Sidebar</h3>
+                <div class="prompt-box" onclick="copyPrompt(this)">
+                    <strong>Prompt:</strong> "Create a vertical sidebar navigation with icons next to each item, dark theme, collapsible functionality, active state indicator, perfect for admin dashboards and web applications"
+                </div>
+            </div>
+
+            <!-- Menú Móvil -->
+            <div class="component-card">
+                <div class="preview-area">
+                    <div class="nav-mobile">
+                        <div class="mobile-header">
+                            <span style="font-weight: bold;">Mi App</span>
+                            <div class="hamburger">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                        <div style="padding-top: 1rem;">
+                            <p style="color: #666; font-size: 0.9rem;">Menú desplegable móvil</p>
+                        </div>
+                    </div>
+                </div>
+                <h3>Menú Móvil Hamburguesa</h3>
+                <div class="prompt-box" onclick="copyPrompt(this)">
+                    <strong>Prompt:</strong> "Design a mobile hamburger menu with animated icon transformation, slide-out drawer navigation, smooth transitions, overlay backdrop, touch-friendly tap targets, accessible keyboard navigation"
+                </div>
+            </div>
+
+            <!-- Menú Dropdown -->
+            <div class="component-card">
+                <div class="preview-area">
+                    <div style="padding: 2rem; background: #f8f9fa;">
+                        <div class="dropdown-menu">
+                            <button class="btn-gradient">Productos ▼</button>
+                            <div class="dropdown-content">
+                                <a href="#">Producto A</a>
+                                <a href="#">Producto B</a>
+                                <a href="#">Producto C</a>
+                                <a href="#">Ver Todos</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h3>Menú Dropdown</h3>
+                <div class="prompt-box" onclick="copyPrompt(this)">
+                    <strong>Prompt:</strong> "Create a dropdown menu with smooth appearance animation, clear hierarchy, hover states, arrow indicator, multi-level submenu support, keyboard accessible, mobile-friendly touch interactions"
+                </div>
+            </div>
+
+            <!-- Mega Menú -->
+            <div class="component-card">
+                <div class="preview-area">
+                    <div class="mega-menu">
+                        <div class="mega-grid">
+                            <div class="mega-column">
+                                <h4>Electrónica</h4>
+                                <ul>
+                                    <li><a href="#">Computadoras</a></li>
+                                    <li><a href="#">Teléfonos</a></li>
+                                    <li><a href="#">Tablets</a></li>
+                                    <li><a href="#">Accesorios</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-column">
+                                <h4>Hogar</h4>
+                                <ul>
+                                    <li><a href="#">Muebles</a></li>
+                                    <li><a href="#">Decoración</a></li>
+                                    <li><a href="#">Cocina</a></li>
+                                    <li><a href="#">Jardín</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-column">
+                                <h4>Moda</h4>
+                                <ul>
+                                    <li><a href="#">Ropa Hombre</a></li>
+                                    <li><a href="#">Ropa Mujer</a></li>
+                                    <li><a href="#">Zapatos</a></li>
+                                    <li><a href="#">Accesorios</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h3>Mega Menú</h3>
+                <div class="prompt-box" onclick="copyPrompt(this)">
+                    <strong>Prompt:</strong> "Design a mega menu with multi-column layout, category headers, featured products section, images integration, organized content groups, full-width dropdown, e-commerce optimized"
+                </div>
+            </div>
+
+            <!-- Menú Tabs -->
+            <div class="component-card">
+                <div class="preview-area">
+                    <div>
+                        <div class="tab-menu">
+                            <div class="tab-item active">Inicio</div>
+                            <div class="tab-item">Perfil</div>
+                            <div class="tab-item">Configuración</div>
+                        </div>
+                        <div style="padding: 1.5rem; background: #f8f9fa; border-radius: 0 0 8px 8px;">
+                            <p style="color: #666;">Contenido de la pestaña activa</p>
+                        </div>
+                    </div>
+                </div>
+                <h3>Menú de Pestañas</h3>
+                <div class="prompt-box" onclick="copyPrompt(this)">
+                    <strong>Prompt:</strong> "Create a tab navigation component with active state indicator, smooth content transitions, horizontal scrollable tabs for mobile, badge notifications, close button option, accessible ARIA attributes"
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="../script.js"></script>
+</body>
+</html>
